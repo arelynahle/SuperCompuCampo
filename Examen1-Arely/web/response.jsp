@@ -3,7 +3,7 @@
 <%-- 
     Document   : response
     Created on : Sep 10, 2014, 12:55:29 PM
-    Author     : usuario
+    Author     : arelynahle
 --%>
 
 <sql:query var="directorQuery" dataSource="jdbc/Tec">
@@ -23,13 +23,13 @@
         <table border="0">
             <thead>
                 <tr>
-                    <th colspan="2">${directorDetails.name}</th>
+                    <th colspan="2">${directorDetails.Name}</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><strong>Director de la carrera </strong></td>
-                    <td><strong>${directorDetails.nombre}</strong>
+                    <td><strong>Director de Carrera: </strong></td>
+                    <td>${directorDetails.Nombre}
                         <br><span style="font-size:smaller; font-style:italic;">
                 </tr>
             </tbody>
