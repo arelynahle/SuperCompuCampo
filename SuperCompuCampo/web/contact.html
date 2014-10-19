@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+
+<title>Kids Land - Responsive Children HTML5 Template - Contact</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic,900%7CPacifico' rel='stylesheet' type='text/css'>
+
+<!-- Favicons -->
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="js/prettyphoto/css/prettyPhoto.css" type="text/css" media="all" />
+                <script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+                <script language="javascript" type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js"></script>
+
+                <script>
+
+                  $(function() {
+                     $( "#bookform" ).validate({
+                   rules: {
+                           nombre: {
+                           required: true,
+                           minlength: 5,
+                           maxlength: 50,
+                           customvalidation: true
+                          },  
+                           edadCronologica: {
+                           required: true,
+                           minlength: 1,
+                           maxlength: 2,
+                           customvalidation: true
+                          },
+                           edadMental: {
+                           required: true,
+                           minlength: 1,
+                           maxlength: 2,
+                           customvalidation: true
+                          },
+                           escolaridad: {
+                           required: true,
+                           minlength: 2,
+                           maxlength: 30,
+                           customvalidation: true
+                          },
+                           institucion: {
+                           required: true,
+                           minlength: 2,
+                           maxlength: 30,
+                           customvalidation: true
+                          },
+                           hospital: {
+                           required: true,
+                           minlength: 2,
+                           maxlength: 30,
+                           customvalidation: true
+                          },
+                           cual: {
+                           required: true,
+                           minlength: 2,
+                           maxlength: 30,
+                           customvalidation: true
+                          },
+                           cual1: {
+                           required: true,
+                           minlength: 2,
+                           maxlength: 30,
+                           customvalidation: true
+                          },
+                          'discapacidad': {required:true
+                          }
+                    },
+                   messages: {
+                           nombre: {
+                           required: "Campo requerido",
+                           minlength: $.format("Sigue escribiendo, son al menos {0} caracteres"),
+                           maxlength: $.format("Máximo {0} caracteres")
+                           },
+                           edadCronologica: {
+                           required: "Campo requerido",
+                           minlength: $.format("Sigue escribiendo, son al menos {0} caracteres"),
+                           maxlength: $.format("Máximo {0} caracteres")
+                           },
+                           edadMental: {
+                           required: "Campo requerido",
+                           minlength: $.format("Sigue escribiendo, son al menos {0} caracteres"),
+                           maxlength: $.format("Máximo {0} caracteres")
+                           },
+                           escolaridad: {
+                           required: "Campo requerido",
+                           minlength: $.format("Sigue escribiendo, son al menos {0} caracteres"),
+                           maxlength: $.format("Máximo {0} caracteres")
+                           },
+                           institucion: {
+                           required: "Campo requerido",
+                           minlength: $.format("Sigue escribiendo, son al menos {0} caracteres"),
+                           maxlength: $.format("Máximo {0} caracteres")
+                           },
+                           hospital: {
+                           required: "Campo requerido",
+                           minlength: $.format("Sigue escribiendo, son al menos {0} caracteres"),
+                           maxlength: $.format("Máximo {0} caracteres")
+                           },
+                           cual: {
+                           required: "Campo requerido",
+                           minlength: $.format("Sigue escribiendo, son al menos {0} caracteres"),
+                           maxlength: $.format("Máximo {0} caracteres")
+                           },
+                           cual1: {
+                           required: "Campo requerido",
+                           minlength: $.format("Sigue escribiendo, son al menos {0} caracteres"),
+                           maxlength: $.format("Máximo {0} caracteres")
+                           }
+                          }
+                 });
+
+                 $.validator.addMethod("customvalidation",
+                         function(value, element) {
+                                 return /^[A-Za-z\d=#$%@_ -]+$/.test(value);
+                         },
+                 "No se aceptan caracteres especiales"
+                 );
+               });
+                </script>  
+
+</head>
+
+<body>
+
+
+<div id="main" class="wrap">
+
+<header id="header-bar" class="wrap">
+  
+   <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="clearfix">
+            <div id="logo"><a href="index.html"><img class="img-responsive" src="images/logo.png" alt=""/></a></div>
+            
+            <nav class="navbar navbar-custom" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse-navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            </div>
+            <div class="collapse navbar-collapse" id="collapse-navigation">
+              <ul class="nav menu-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a>
+                 <ul class="sub-menu">
+	   <li><a href="faq.html">FAQ</a></li>
+	   <li><a href="testimonials.html">Testimonials</a></li>
+       <li><a href="pricing-table.html">Pricing Table</a></li>
+       <li><a href="404-page.html">404 Page</a></li>
+   </ul>
+                </li>
+                <li><a href="teachers.html">Teachers</a>
+                <ul class="sub-menu">
+	          <li><a href="single-teacher.html">Single Teacher</a></li>
+			   </ul>
+                </li>
+                <li><a href="gallery-3col.html">Galleries</a>
+      <ul class="sub-menu">
+	   <li><a href="gallery-2col.html">2 Columns</a></li>
+	   <li><a href="gallery-3col.html">3 Columns</a></li>
+       <li><a href="gallery-4col.html">4 Columns</a></li>
+       <li><a href="single-gallery-1.html">Single Gallery Album</a></li>
+   </ul>
+      </li>
+      			<li><a href="events-3col.html">Events</a>
+                <ul class="sub-menu">
+	   <li><a href="events-2col.html">2 Columns</a></li>
+	   <li><a href="events-3col.html">3 Columns</a></li>
+       <li><a href="single-event.html">Single Event</a></li>
+  				</ul>
+                </li>
+                <li><a href="blog.html">Blog</a></li>
+                <li class="current_page_item"><a href="contact.html">Contact</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+            
+          </nav>
+           
+          </div><!--.clearfix-->
+  
+      </div><!--.col-md-12-->
+    </div><!--.row-->
+    </div><!--.container-->
+  </header><!-- header-bar-->
+  
+
+<section class="page-top wrap">
+
+	<h2 class="page-section-title">Get in Touch</h2>
+
+</section><!-- page-top -->
+  <div class="zz-bottom"></div>
+
+<section class="page-content wrap">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-sm-6 col-md-6">
+
+<div id="contact-form-holder">
+
+    <form id="bookform" name="" method="get"  action="Mensaje.html">
+
+                        <h4>Llena los siguientes campos, por favor.</h4>
+
+
+                    <fieldset>
+                        <legend>Datos generales: </legend>
+                        <label for="nombre"><strong>Nombre Completo:&nbsp;<strong></label>
+                        <input name="nombre" type="text"size="20" /><br><br>
+        
+                        <label for="edadCronologica">Edad Cronológica:&nbsp;</label>
+                        <input name= "edadCronologica" type="number" id="edadCronologica"><br><br>
+                     
+                        <label for="edadMental">Edad Mental:&nbsp;</label>
+                        <input name= "edadMental" type="number" id="edadMental"><br><br>
+
+                       <label>Escolaridad:</label>
+                          <select>
+                              <option value="preescolar">Preescolar</option>
+                              <option value="primaria">Primaria</option>
+                              <option value="secundaria">Secundaria</option>
+                          </select>
+                         <br><br>
+
+                       <label for="institucion">Institución:&nbsp;</label>
+                        <input name= "institucion" type="text" id="institucion"><br><br>
+
+                        <legend>Discapacidad</legend>
+                        <input type="checkbox" name="discapacidad" value="sindromeDown"><label><strong>Síndrome de Down</strong></label><br>
+                        <input type="checkbox" name="discapacidad" value="problemaNeuromotor"><label><strong>Problemas Neuromotores</strong></label><br>
+                        <input type="checkbox" name="discapacidad" value="deficienciaMental"><label><strong>Deficiencia Mental</strong></label><br>
+                        <input type="checkbox" name="discapacidad" value="silente"><label><strong>Silente</strong></label><br>
+                        <input type="checkbox" name="discapacidad" value="paralisisCerebral"><label><strong>Parálisis Cerebral</strong></label><br>
+                        <input type="checkbox" name="discapacidad" value="autismo"><label><strong>Autismo</strong></label><br>
+                        <input type="checkbox" name="discapacidad" value="otra"> <label><strong>Otra</strong></label>
+                    </fieldset>   
+
+                    <fieldset>
+                    <legend>Datos médicos</legend>   
+
+                    <legend>¿Está bajo tratamiento médico?</legend>
+                       <input type="radio" name="tratamiento" value="si"> <label><strong>Sí, </strong></label>
+                       <label for="cual"><strong>¿cuál?:&nbsp;<strong></label>
+                       <input name="cual" type="text" size="20" /><br>
+                       <input type="radio" name="tratamiento" value="no"><label><strong>No</strong></label><br><br>
+
+                    <legend>¿Usa silla de ruedas?</legend>
+                       <input type="radio" name="silla" value="si"><label><strong>Sí, </strong></label><br>
+                       <input type="radio" name="silla" value="no"><label><strong>No</strong></label><br><br>
+
+                    <legend>En caso de emergencia, ¿cuál sería el hospital más adecuado para trasladarlo?</legend>
+                        <label for="hospital"><strong>Hospital:&nbsp;<strong></label>
+                        <input name="hospital" type="text"size="40" /><br><br>
+                    </fieldset>
+
+                    <fieldset>
+                    <legend>En caso de emergencia, llamar a: </legend>
+                        <label><strong>Papá</strong><input type="checkbox" name="emergencia" value="papa"></label><br>
+                        <label><strong>Mamá</strong><input type="checkbox" name="emergencia" value="mama"></label><br>
+                        <label><strong>Otro</strong><input type="checkbox" name="emergencia" value="otro"></label>
+                        <label for="cual1"><strong>¿Cuál?:&nbsp;<strong></label>
+                        <input name="cual1" type="text" size="20"/><br><br>
+                        <label for="telefono"><strong>Telefono:&nbsp;<strong></label>
+                        <input name="telefono" type="text"size="40"/>
+                        <label for="celular"><strong>Celular:&nbsp;<strong></label>
+                        <input name="celular" type="text"size="40"/>
+                        <label for="oficina"><strong>Oficina:&nbsp;<strong></label>
+                        <input name="oficina" type="text"size="40"/><br><br>
+                  </fieldset>
+                  <fieldset>
+                    <label for="responsable"><strong>Responsable de la institucion:&nbsp;<strong></label>
+                    <input name="responsable" type="text"size="40"/>
+                    <label for="responsablecelular"><strong>Celular: &nbsp;<strong></label>
+                    <input name="responsablecelular" type="text"size="40"/><br><br>
+                  </fieldset>
+
+                    <legend>Talla de playera: </legend>
+                    <legend>Niño</legend>
+                    <input type="checkbox" name="tallanino" value="ch"><label><strong>CH</strong></label><br>
+                    <input type="checkbox" name="tallanino" value="m"><label><strong>M</strong></label><br>
+                    <input type="checkbox" name="tallanino" value="g"><label><strong>G</strong></label><br>
+                    <input type="checkbox" name="tallanino" value="eg"><label><strong>EG</strong></label><br>
+
+                    <legend>Adulto</legend>
+                    <input type="checkbox" name="tallanino" value="ch"><label><strong>CH</strong></label><br>
+                    <input type="checkbox" name="tallanino" value="m"><label><strong>M</strong></label><br>
+                    <input type="checkbox" name="tallanino" value="g"><label><strong>G</strong></label><br>
+                    <input type="checkbox" name="tallanino" value="eg"><label><strong>EG</strong></label><br>
+
+                   <p>
+                        <input class="submit" type="submit" value="Submit"/>
+                        <input class="reset" type="reset" value="Limpiar"/>
+                   </p>
+
+                </form>
+	</div><!-- contact-form-holder-->
+    
+    <div id="output-contact"></div>
+
+
+</div><!-- col-md-6-->
+
+<div class="col-sm-6 col-md-6">
+
+<div class="contact-right">
+
+<h5 class="widgettitle">Find us:</h5>
+
+<ul class="contact-social">
+<li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-vimeo-square"></i></a></li>
+</ul>
+
+<p>Phasellus porttitor posuere tempor. Aenean facilisis, neque a varius porttitor, risus dui tempus libero, dictum aliquet justo enim vitae lorem. Aliquam lacinia lacinia mi ac convallis. Nulla et lacus et risus laoreet consectetur sed non magna.</p>
+
+<ul class="contact-info">
+<li><i class="fa fa-map-marker"></i>Address: 30 New York Street, New York, USA</li>
+<li><i class="fa fa-mobile"></i>Phone: 000 - 111 - 222</li>
+<li><i class="fa fa-fax"></i>Fax: 000 - 111 - 222</li>
+<li><i class="fa fa-envelope"></i>Email: contact [at] lawyers [dot] com</li>
+</ul>
+
+<div class="video-widget">
+
+<iframe height="400" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=ro&amp;geocode=&amp;q=New+York,+NY,+United+States&amp;aq=3&amp;oq=New+York+&amp;sll=40.765982,-73.974037&amp;sspn=0.104791,0.264187&amp;ie=UTF8&amp;hq=&amp;hnear=New+York,+Manhattan,+New+York&amp;ll=40.714353,-74.005973&amp;spn=0.013109,0.033023&amp;t=m&amp;z=14&amp;output=embed"></iframe>
+
+</div>
+
+</div><!--contact-right-->
+
+</div><!--col-md-6-->
+
+</div><!-- row -->
+
+</div><!-- container-->
+
+</section><!-- page-content-->
+
+<div class="zz-top-foo"></div>
+<footer class="wrap">
+
+<div class="container">
+<div class="row">
+
+	<div class="col-md-4">
+	<div class="foo-block">
+    <h4 class="widgettitle">About</h4>
+	<p>In justo risus, fermentum eget egestas eget, element vitae tortor. Maecenas lorem mi, interdum id commodo ac, tincidunt vitae magna. In hac habitasse platea dictumst. Pellentesque quam.    </p>
+    </div><!--end foo-block-->
+	</div><!--end col-md-4-->
+    
+    <div class="col-md-4">
+	<div class="foo-block">
+    <h4 class="widgettitle">Schedule</h4>
+	<ul>
+    <li>Monday - Friday: 9.00 AM - 3.00 PM</li>
+    <li>Saturday- Sunday: Closed</li>
+    </ul>
+    </div><!--end foo-block-->
+	</div><!--end col-md-4-->
+    
+    <div class="col-md-4">
+	<div class="foo-block">
+    <h4 class="widgettitle">Contact Us</h4>
+	<ul>
+    <li>Address: 501 Boulevard, New York City, New York</li>
+    <li>Phone: 1-800-000-111</li>
+    <li>Fax: 1-800-000-111</li>
+    <li>Email: contact [at] kidsland [dot] com</li>
+    </ul>
+    </div><!-- foo-block-->
+	</div><!-- col-md-4-->
+    
+</div><!-- row-->
+
+</div><!-- container-->
+
+<div class="copyright clearfix">
+
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+
+<p>© 2014 Lawyers. All rights reserved. Theme by matchthemes.</p>
+
+<ul>
+<li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-vimeo-square"></i></a></li>
+</ul>
+
+</div><!-- col-md-12-->
+</div><!-- row-->
+</div><!-- container-->
+
+</div><!-- copyright-->
+
+</footer>
+
+</div><!-- main -->
+
+<div class="scrollup">
+<a class="scrolltop" href="#">
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+
+
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+<script type='text/javascript' src='css/bootstrap/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='js/jquery.easing.min.js'></script>
+<script type='text/javascript' src='js/jquery.flexslider-min.js'></script>
+<script type='text/javascript' src='js/prettyphoto/js/jquery.prettyPhoto.js'></script>
+<script type='text/javascript' src='js/jquery.form.min.js'></script>
+<script type='text/javascript' src='js/contactform.js'></script>
+<script type='text/javascript' src='js/init.js'></script>
+
+</body>
+</html>
