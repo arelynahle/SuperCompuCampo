@@ -9,7 +9,7 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 
-<title>Alta niños</title>
+<title>Alta Institución</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -93,7 +93,7 @@
 
 <section class="page-top wrap">
 
-	<h2 class="page-section-title">Alta de niños</h2>
+	<h2 class="page-section-title">Alta de Instituciones</h2>
 
 </section><!-- page-top -->
   <div class="zz-bottom"></div>
@@ -108,102 +108,58 @@
 
 <div id="contact-form-holder">
 
-    <form id="altanino" name="" method="get"  action="Mensaje.html">
+    <form id="altainstitucion" name="" method="get"  action="Mensaje.html">
 
-                    <h4>Llena los siguientes campos, por favor.</h4>
+                        <h4>Llena los siguientes campos, por favor.</h4>
 
-                    <fieldset>       
-                        <legend>Datos generales</legend>
-                        <label for="nombre"><strong>Nombre(s): &nbsp;<strong></label>
-                        <input name="nombre" type="text"size="20" /><br><br>
+          
+                        <legend>Institución </legend>
+                        <label for="nombre"><strong>Nombre: &nbsp;<strong></label>
+                        <input name="nombreinstitucion" type="text"size="20" /><br><br>
                         
-                        <label for="apellidopaterno"><strong>Apellido Paterno: &nbsp;<strong></label>
-                        <input name="apellidopaterno" type="text"size="20" /><br><br>
+                        <label for="telefono_i"><strong>Teléfono: &nbsp;<strong></label>
+                        <input name="telefono_i" type="text"size="20" /><br><br> 
                         
-                        <label for="apellidomaterno"><strong>Apellido Materno: &nbsp;<strong></label>
-                        <input name="apellidomaterno" type="text"size="20" /><br><br>
-        
-                        <label for="edadCronologica">Edad Cronológica: &nbsp;</label>
-                        <input name= "edadCronologica" type="number" id="edadCronologica"><br><br>
-                     
-                        <label for="edadMental">Edad Mental: &nbsp;</label>
-                        <input name= "edadMental" type="number" id="edadMental"><br><br>
-
-                       <label>Escolaridad:</label>
-                          <select>
-                              <option value="preescolar">Preescolar</option>
-                              <option value="primaria">Primaria</option>
-                              <option value="secundaria">Secundaria</option>
-                          </select>
-                         <br><br>
-
-                       <label for="institucion">Institución:&nbsp;</label>
-                        <input name= "institucion" type="text" id="institucion"><br><br>
-
-                        <label>Discapacidad: </label><br>
-                        <input type="checkbox" name="discapacidad" value="sindromeDown"> <label>Síndrome de Down</label><br>
-                        <input type="checkbox" name="discapacidad" value="problemaNeuromotor">  <label>Problemas Neuromotores</label><br>
-                        <input type="checkbox" name="discapacidad" value="deficienciaMental">  <label>Deficiencia Mental</label><br>
-                        <input type="checkbox" name="discapacidad" value="silente">  <label>Silente</label><br>
-                        <input type="checkbox" name="discapacidad" value="paralisisCerebral">  <label>Parálisis Cerebral</label><br>
-                        <input type="checkbox" name="discapacidad" value="autismo">  <label>Autismo</label><br>
-                        <input type="checkbox" name="discapacidad" value="otra">  <label>Otra</label><br><br>
-                    </fieldset>   
-
-                    <fieldset>       
-                        <legend>Datos médicos: </legend>
-                    <label>¿Está bajo tratamiento médico?</label><br>
-                       <input type="radio" name="tratamiento" value="si"> <label><strong>Sí, </strong></label>
-                       <label for="cual"><strong>¿cuál?:&nbsp;<strong></label>
-                       <input name="cual" type="text" size="20" /><br>
-                       <input type="radio" name="tratamiento" value="no"> <label><strong>No</strong></label><br><br>
-
-                       <label>¿Usa silla de ruedas?</label><br>
-                       <input type="radio" name="silla" value="si"> <label><strong>Sí</strong></label><br>
-                       <input type="radio" name="silla" value="no"> <label><strong>No</strong></label><br><br>
-
-                    <label>En caso de emergencia, ¿cuál sería el hospital más adecuado para trasladarlo?</label>
-                        <input name="hospital" type="text"size="40" /><br><br>
-                    </fieldset>
-
                     <fieldset>
-                        <label>En caso de emergencia, llamar a: </label><br>
-                        <input type="checkbox" name="emergencia" value="papa"> <label><strong>Papá</strong></label><br>
-                        <input type="checkbox" name="emergencia" value="mama"> <label><strong>Mamá</strong></label><br>
-                        <input type="checkbox" name="emergencia" value="otro"> <label><strong>Otro: </strong></label>
-                        <input name="cual1" type="text" size="20"/><br><br>
-                        <label for="telefono"><strong>Telefono:&nbsp;<strong></label>
-                        <input name="telefono" type="text"size="40"/><br><br>
-                        <label for="celular"><strong>Celular:&nbsp;<strong></label>
-                        <input name="celular" type="text"size="40"/><br><br>
-                        <label for="oficina"><strong>Oficina:&nbsp;<strong></label>
-                        <input name="oficina" type="text"size="40"/><br><br>
-                  </fieldset>
-                  <fieldset>
-                    <label for="responsable"><strong>Responsable de la institucion:&nbsp;<strong></label>
-                    <input name="responsable" type="text"size="40"/><br><br>
-                    <label for="responsablecelular"><strong>Celular: &nbsp;<strong></label>
-                    <input name="responsablecelular" type="text"size="40"/><br><br>
-                  </fieldset>
-
-                    <legend>Talla de playera: </legend>
-                    <label>Niño</label><br>
-                    <input type="checkbox" name="tallanino" value="ch"> <label><strong>CH</strong></label><br>
-                    <input type="checkbox" name="tallanino" value="m"> <label><strong>M</strong></label><br>
-                    <input type="checkbox" name="tallanino" value="g"> <label><strong>G</strong></label><br>
-                    <input type="checkbox" name="tallanino" value="eg"> <label><strong>EG</strong></label><br><br>
-
-                    <label>Adulto</label><br>
-                    <input type="checkbox" name="tallanino" value="ch"> <label><strong>CH</strong></label><br>
-                    <input type="checkbox" name="tallanino" value="m"> <label><strong>M</strong></label><br>
-                    <input type="checkbox" name="tallanino" value="g"> <label><strong>G</strong></label><br>
-                    <input type="checkbox" name="tallanino" value="eg"> <label><strong>EG</strong></label><br><br>
-
+                        <legend>Director</legend>
+                        <label for="nombre"><strong>Nombre(s): &nbsp;<strong></label>
+                        <input name="nombredirector" type="text"size="20" /><br><br>
+                        
+                        <label for="nombre"><strong>Apellido Paterno: &nbsp;<strong></label>
+                        <input name="apellidopaterno_d" type="text"size="20" /><br><br>   
+                        
+                        <label for="nombre"><strong>Apellido Materno: &nbsp;<strong></label>
+                        <input name="apellidomaterno_d" type="text"size="20" /><br><br>  
+                        
+                         <label for="celular_d"><strong>Celular: &nbsp;<strong></label>
+                        <input name="celular_d" type="text"size="20" /><br><br> 
+                        
+                    </fieldset>
+                        
+                        <fieldset>
+                            <legend>Dirección</legend>
+                            <label for="calle"><strong>Calle y número: &nbsp;<strong></label>
+                            <input name="calle" type="text"size="20" /><br><br>
+                            
+                            <label for="colonia"><strong>Colonia: &nbsp;<strong></label>
+                            <input name="colonia" type="text"size="20" /><br><br>
+                            
+                            <label for="ciudad"><strong>Ciudad: &nbsp;<strong></label>
+                            <input name="ciudad" type="text"size="20" /><br><br>
+                            
+                            <label for="estado"><strong>Estado: &nbsp;<strong></label>
+                            <input name="estado" type="text"size="20" /><br><br>
+                            
+                            <label for="codigopostal"><strong>Código Postal: &nbsp;<strong></label>
+                            <input name="codigopostal" type="text"size="20" /><br><br>
+                        </fieldset>   
+                        
+                        
+                        
                    <p>
                         <input class="submit" type="submit" value="Submit"/>
                         <input class="reset" type="reset" value="Limpiar"/>
-                   </p>
-
+                   </p>                   
                 </form>
 	</div><!-- contact-form-holder-->
     
