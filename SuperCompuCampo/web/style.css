@@ -1013,6 +1013,15 @@ height:165px;}
 
 }
 
+@media (min-width: 1200px) {
+
+.wrap{width:1200px;}
+
+.img-equipo{width:265px;
+height:265px;}
+
+}
+
 @media (min-width: 768px) and (max-width: 979px) {
 
 .wrap{width:768px;}
