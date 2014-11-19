@@ -1,7 +1,7 @@
 package Model;
 
 /**
- *
+ * 
  * @author Carlos Gerardo
  */
 public class responsable {
