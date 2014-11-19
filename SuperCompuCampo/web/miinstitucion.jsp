@@ -9,7 +9,7 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 
-<title>Log-in</title>
+<title>Mi Institución</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="style.css" type="text/css" media="all" />
 <link rel="stylesheet" href="js/prettyphoto/css/prettyPhoto.css" type="text/css" media="all" />
- 
+
 </head>
 
 <body>
@@ -39,7 +39,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="clearfix">
-            <div id="logo"><a href="index.html"><img class="img-responsive" src="images/logo.png" alt=""/></a></div>
+            <div id="logo"><img class="img-responsive" src="images/logo.png"/></div>
             
             <nav class="navbar navbar-custom" role="navigation">
             <div class="navbar-header">
@@ -48,31 +48,12 @@
             <div class="collapse navbar-collapse" id="collapse-navigation">
             <ul class="nav menu-nav">
               
-                <li><a href="index.html">Inicio</a></li>
+                <li class="current_page_item"><a href="miinstitucion.jsp">Mi Institucion</a></li>
                 
-                <li><a href="about.html">Nosotros</a>
-                </li>
+                <li><a href="contact.html">Alta de Niños</a></li>
+        
                 
-                <li><a href="teachers.html">Equipo</a>
-                </li>
-                
-                <li><a href="patrocinadores.html">Patrocinadores</a>
-                </li>
-                
-                <li><a href="gallery-4col.html">GalerÃ­a</a>
-               
-                </li>
-      		
-                <li><a>Eventos</a>
-                    <ul class="sub-menu">
-                        <li><a href="curso.html">Curso de Verano</a></li>
-                        <li><a href="posada.html">Posada</a></li>
-                    </ul>
-                </li>
-                
-                <li><a href="unete.html">Ãšnete</a></li>
-                
-                 <li class="current_page_item"><a href="login.html">Log-in</a></li>
+                 <li><a href="index.html">Salir</a></li>
             </ul>
             </div><!-- /.navbar-collapse -->
             
@@ -88,7 +69,7 @@
 
 <section class="page-top wrap">
 
-	<h2 class="page-section-title">Ingresa</h2>
+	<h2 class="page-section-title">Mi Institución</h2>
 
 </section><!-- page-top -->
   <div class="zz-bottom"></div>
@@ -101,39 +82,13 @@
 
 <div class="col-sm-6 col-md-6">
 
-<div id="contact-form-holder">
+<h3 class="widgettitle">Datos Generales</h3>
 
-    <form id="altanino" name="" method="get"  action="miinstitucion.jsp">
-
-                    <fieldset>       
-                        <legend>Datos InstituciÃ³n</legend>
-                        <label for="usuario"><strong>Usuario: &nbsp;<strong></label>
-                        <input name="usuario" type="text"size="20" /><br><br>
-                        
-                        <label for="password"><strong>Clave: &nbsp;<strong></label>
-                        <input name="password" type="text"size="20" /><br><br>
-                     
-                    </fieldset>   
-
-                   <p>
-                       <button><a href=""></a>Log-in</button>
-                        <!--<input class="submit" type="submit" value="Log-in"/>-->
-                       
-                   </p>
-
-                </form>
-	</div><!-- contact-form-holder-->
-    
-    <div id="output-contact"></div>
-
+<p>lalalalala</p>
 
 </div><!-- col-md-6-->
 
-<div class="col-sm-6 col-md-6">
-
-</div><!--col-md-6-->
-
-</div><!-- row -->
+</div><!--row-->
 
 </div><!-- container-->
 
@@ -148,7 +103,7 @@
 <div class="row">
 <div class="col-md-12">
 
-<p>Â©2014 DAW- Arely, Rolando y Carlos</p>
+<p>©2014 DAW- Arely, Rolando y Carlos</p>
 
 <ul>
 <li><a href="https://www.facebook.com/supercompucampo.itesm" target="_blank"><i class="fa fa-facebook"></i></a></li>
