@@ -72,7 +72,7 @@ em { font-style: italic; }
 .margin-t72{margin-top:72px;}
 .margin-b72{margin-bottom:72px;}
 .margin-72{margin:72px 0;}
-.padding-72{padding:72px 0;}
+.padding-72{padding:20px 0;}
 .margin-t15{margin-top:15px;}
 .column-clear{clear:both;}
 div { position:relative; } 
@@ -333,7 +333,7 @@ border-radius:0;}
  ************************************/
  
 #slider-home, .page-top{background:#3cbee6;
-padding:72px 0 87px 0;}
+padding:20px 0 30px 0;}
 
 .flexslider{overflow:hidden;}
 
