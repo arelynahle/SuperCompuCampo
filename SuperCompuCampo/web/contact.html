@@ -100,43 +100,50 @@
                         <input name="am_nino" type="text"size="20" /><br><br>
         
                         <label for="edad_cron">Edad Cronológica: &nbsp;</label>
-                        <input name= "edad_cron" type="number" id="edadCronologica"><br><br>
+                        <input name= "edad_cron" type="number" id="edad_cron"><br><br>
                      
                         <label for="edadMental">Edad Mental: &nbsp;</label>
-                        <input name= "edadMental" type="number" id="edadMental"><br><br>
+                        <input name= "edad_men_det" type="number" id="edadMental"><br><br>
+                        
+                        <label for="id_inst">Institución ID: &nbsp;</label>
+                        <input name= "id_inst" type="number" id="id_inst"><br><br>
 
-                       <label>Escolaridad:</label>
+                        <label for="id_res">Responsable ID: &nbsp;</label>
+                        <input name= "id_res" type="number" id="id_res"><br><br>
+                        
+                        <label for="id_det">Detalles ID: &nbsp;</label>
+                        <input name= "id_det" type="number" id="id_det"><br><br>                        
+                        
+                        
+                        <label>Escolaridad:</label>
                           <select>
-                              <option value="preescolar">Preescolar</option>
-                              <option value="primaria">Primaria</option>
-                              <option value="secundaria">Secundaria</option>
+                              <option name="escolaridad_det" value="preescolar">Preescolar</option>
+                              <option name="escolaridad_det" value="primaria">Primaria</option>
+                              <option name="escolaridad_det" value="secundaria">Secundaria</option>
                           </select>
                          <br><br>
 
-                       <!--label for="institucion">Institución:&nbsp;</label>
-                        <input name= "institucion" type="text" id="institucion"><br><br-->
-
                         <label>Discapacidad: </label><br>
-                        <input type="checkbox" name="discapacidad" value="sindromeDown"> <label>Síndrome de Down</label><br>
-                        <input type="checkbox" name="discapacidad" value="problemaNeuromotor">  <label>Problemas Neuromotores</label><br>
-                        <input type="checkbox" name="discapacidad" value="deficienciaMental">  <label>Deficiencia Mental</label><br>
-                        <input type="checkbox" name="discapacidad" value="silente">  <label>Silente</label><br>
-                        <input type="checkbox" name="discapacidad" value="paralisisCerebral">  <label>Parálisis Cerebral</label><br>
-                        <input type="checkbox" name="discapacidad" value="autismo">  <label>Autismo</label><br>
-                        <input type="checkbox" name="discapacidad" value="otra">  <label>Otra</label><br><br>
+                        <input type="checkbox" name="discapacidad_det" value="sindromeDown"> <label>Síndrome de Down</label><br>
+                        <input type="checkbox" name="discapacidad_det" value="problemaNeuromotor">  <label>Problemas Neuromotores</label><br>
+                        <input type="checkbox" name="discapacidad_det" value="deficienciaMental">  <label>Deficiencia Mental</label><br>
+                        <input type="checkbox" name="discapacidad_det" value="silente">  <label>Silente</label><br>
+                        <input type="checkbox" name="discapacidad_det" value="paralisisCerebral">  <label>Parálisis Cerebral</label><br>
+                        <input type="checkbox" name="discapacidad_det" value="autismo">  <label>Autismo</label><br>
+                        <input type="checkbox" name="discapacidad_det" value="otra">  <label>Otra</label><br><br>
                     </fieldset>   
 
                     <fieldset>       
                         <legend>Datos médicos: </legend>
                     <label>¿Está bajo tratamiento médico?</label><br>
-                       <input type="radio" name="tratamiento" value="si"> <label><strong>Sí, </strong></label>
+                       <input type="radio" name="tratamiento_det" value="si"> <label><strong>Sí, </strong></label>
                        <label for="cual"><strong>¿cuál?:&nbsp;<strong></label>
                        <input name="cual" type="text" size="20" /><br>
-                       <input type="radio" name="tratamiento" value="no"> <label><strong>No</strong></label><br><br>
+                       <input type="radio" name="tratamiento_det" value="no"> <label><strong>No</strong></label><br><br>
 
                        <label>¿Usa silla de ruedas?</label><br>
-                       <input type="radio" name="silla" value="si"> <label><strong>Sí</strong></label><br>
-                       <input type="radio" name="silla" value="no"> <label><strong>No</strong></label><br><br>
+                       <input type="radio" name="silla_det" value="si"> <label><strong>Sí</strong></label><br>
+                       <input type="radio" name="silla_det" value="no"> <label><strong>No</strong></label><br><br>
 
 
                     </fieldset>
@@ -144,18 +151,18 @@
                     <fieldset>
                         <legend>En caso de emergencia, </legend>
                       <label>¿Cuál sería el hospital más adecuado para trasladarlo?</label>
-                        <input name="hospital" type="text"size="40" /><br><br>
+                        <input name="hospital_con" type="text"size="40" /><br><br>
                         <label>Llamar a: </label><br>
-                        <input type="radio" name="parentesco" value="papa"> <label><strong>Papá</strong></label><br>
-                        <input type="radio" name="parentesco" value="mama"> <label><strong>Mamá</strong></label><br>
-                        <input type="radio" name="parentesco" value="otro"> <label><strong>Otro:&nbsp </strong></label>
+                        <input type="radio" name="parentesco_con" value="papa"> <label><strong>Papá</strong></label><br>
+                        <input type="radio" name="parentesco_con" value="mama"> <label><strong>Mamá</strong></label><br>
+                        <input type="radio" name="parentesco_con" value="otro"> <label><strong>Otro:&nbsp </strong></label>
                         <input name="cual1" type="text" size="20"/><br><br>
                         <label for="telefono"><strong>Telefono:&nbsp;<strong></label>
-                        <input name="telefono" type="text"size="40"/><br><br>
+                        <input name="telefono_con" type="text"size="40"/><br><br>
                         <label for="celular"><strong>Celular:&nbsp;<strong></label>
-                        <input name="celular" type="text"size="40"/><br><br>
+                        <input name="celular_con" type="text"size="40"/><br><br>
                         <label for="oficina"><strong>Oficina:&nbsp;<strong></label>
-                        <input name="oficina" type="text"size="40"/><br><br>
+                        <input name="oficina_con" type="text"size="40"/><br><br>
                   </fieldset>
                   <!--fieldset>
                     <label for="responsable"><strong>Responsable de la institución:&nbsp;<strong></label>
@@ -171,7 +178,7 @@
                     <label>Modelo</label><br>
                     <input type="radio" name="tallaplayera_nino" value="ch"> <label><strong>CH</strong>&nbsp;&nbsp</label>
                     <input type="radio" name="tallaplayera_nino" value="m"> <label><strong>M</strong>&nbsp;&nbsp</label>
-                    <input type="radio" name="tallaplayera_ninolla" value="g"> <label><strong>G</strong>&nbsp;&nbsp</label>
+                    <input type="radio" name="tallaplayera_nino" value="g"> <label><strong>G</strong>&nbsp;&nbsp</label>
                     <input type="radio" name="tallaplayera_nino" value="eg"> <label><strong>EG</strong>&nbsp;&nbsp</label><br><br>
                    <p>
                         <input class="submit" type="submit" value="Submit"/>

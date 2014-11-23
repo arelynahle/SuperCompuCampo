@@ -4,7 +4,7 @@ package Model;
  * 
  * @author Carlos Gerardo
  */
-public class responsable {
+public class Responsable {
     
     private int id_res;
     private String nombre_res;
@@ -13,7 +13,7 @@ public class responsable {
     private String cel_res;
     
     
-    public responsable(int id_res,
+    public Responsable(int id_res,
             String nombre_res,
             String ap_res,
             String am_res,
@@ -27,7 +27,7 @@ public class responsable {
         
     }
     
-     public responsable() {
+     public Responsable() {
 
     }
      

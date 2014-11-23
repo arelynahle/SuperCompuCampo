@@ -1,7 +1,3 @@
-<%@page import="Model.Institucion"%>
-<%@page import="java.util.ArrayList"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -13,7 +9,7 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 
-<title>Mi InstituciÃ³n</title>
+<title>¡Alta exitosa!</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -43,7 +39,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="clearfix">
-            <div id="logo"><img class="img-responsive" src="images/logo.png"/></div>
+            <div id="logo"><a href="index.html"><img class="img-responsive" src="images/logo.png"/></a></div>
             
             <nav class="navbar navbar-custom" role="navigation">
             <div class="navbar-header">
@@ -52,12 +48,31 @@
             <div class="collapse navbar-collapse" id="collapse-navigation">
             <ul class="nav menu-nav">
               
-                <li class="current_page_item"><a href="InstServlet?opcion=3">Mi Institucion</a></li>
+                <li><a href="index.html">Inicio</a></li>
                 
-                <li><a href="contact.html">Alta de NiÃ±os</a></li>
-        
+                <li><a href="about.html">Nosotros</a>
+                </li>
                 
-                 <li><a href="index.html">Salir</a></li>
+                <li><a href="teachers.html">Equipo</a>
+                </li>
+                
+                <li><a href="patrocinadores.html">Patrocinadores</a>
+                </li>
+                
+                <li><a href="gallery-4col.html">Galería</a>
+               
+                </li>
+      		
+                <li><a>Eventos</a>
+                    <ul class="sub-menu">
+                        <li><a href="curso.html">Curso de Verano</a></li>
+                        <li><a href="posada.html">Posada</a></li>
+                    </ul>
+                </li>
+                
+                <li class="current_page_item"><a href="unete.html">Únete</a></li>
+                
+                 <li><a href="login.html">Log-in</a></li>
             </ul>
             </div><!-- /.navbar-collapse -->
             
@@ -73,7 +88,7 @@
 
 <section class="page-top wrap">
 
-	<h2 class="page-section-title">Mi InstituciÃ³n</h2>
+	<h2 class="page-section-title">Alta Exitosa de Institución</h2>
 
 </section><!-- page-top -->
   <div class="zz-bottom"></div>
@@ -86,54 +101,73 @@
 
 <div class="col-sm-6 col-md-6">
 
-<h3 class="widgettitle">Datos Generales</h3>
-        <% 
-            ArrayList<Institucion> institucionListJSP=(ArrayList<Institucion>) request.getAttribute("institucionList");
-        %>
+<h3 class="widgettitle">Gracias por tu Interés</h3>
 
-        <table cellspacing="5" cellpadding="5" border="3">
-            <tr>
-                <td>Id</td>
-                <td>Nombre </td>
-                <td>Calle</td>
-                <td>Numero</td>
-                <td>Colonia</td>
-                <td>CP</td>
-                <td>Ciudad</td>                
-                <td>Estado</td>
-                <td>TelÃ©fono</td>
-                <td>MÃ¡ximo de niÃ±os</td>
-                <td>Nombre Director</td>
-                <td>Apellido Paterno</td>
-                <td>Apellido Materno</td>
-                <td>Celular</td>
-                <td>Email</td>
-            </tr>
-            <%
-            for(Institucion institucion : institucionListJSP) {
-            %>
-            <tr>
-                
-                <td><%=institucion.getid_inst()%></td>
-                <td><%=institucion.getnombre_inst()%></td>
-                <td><%=institucion.getcalle_inst()%></td>
-                <td><%=institucion.getnumero_inst()%></td>
-                <td><%=institucion.getcp_inst()%></td>                
-                <td><%=institucion.getcolonia_inst()%></td>
-                <td><%=institucion.getciudad_inst()%></td> 
-                <td><%=institucion.getestado_inst()%></td>
-                <td><%=institucion.gettel_inst()%></td> 
-                <td><%=institucion.getmax_ninos_inst()%></td>
-                <td><%=institucion.getnombre_dir()%></td> 
-                <td><%=institucion.getap_dir()%></td>   
-                <td><%=institucion.getam_dir()%></td>   
-                <td><%=institucion.getcel_dir()%></td>   
-                <td><%=institucion.getemail_dir()%></td>                                                
-            </tr>
-        <%
-            }   
-        %>
+<p>Hemos recibido tu solicitud, pronto nos pondremos en contacto para hacerte saber la repuesta.</p>
+
+<h5>Aquí te presentamos los datos que introdujiste:</h5>
+
+
+
+
+        <table cellspacing="5" cellpadding="5" border="1">
             
+            <tr>
+                <td>Nombre</td>
+                <td>${instTemp.nombre_inst}</td>
+            </tr>
+            <tr>
+                <td>Teléfono</td>
+                <td>${instTemp.tel_inst}</td>
+            </tr>
+            <tr>
+                <td>Máximo de Niños</td>
+                <td>${instTemp.tel_inst}</td>
+            </tr>
+            <tr>
+                <td>Nombre Director</td>
+                <td>${instTemp.nombre_dir}</td>
+            </tr>
+            <tr>
+                <td>Director Apellido Paterno</td>
+                <td>${instTemp.ap_dir}</td>
+            </tr>
+            <tr>
+                <td>Director Apellido Materno</td>
+                <td>${instTemp.am_dir}</td>
+            </tr>
+            <tr>
+                <td>Celular Director</td>
+                <td>${instTemp.cel_dir}</td>
+            </tr>
+            <tr>
+                <td>Email Director</td>
+                <td>${instTemp.email_dir}</td>
+            </tr>
+            <tr>
+                <td>Calle</td>
+                <td>${instTemp.calle_inst}</td>
+            </tr>
+            <tr>
+                <td>Numero</td>
+                <td>${instTemp.numero_inst}</td>
+            </tr>
+            <tr>
+                <td>Colonia</td>
+                <td>${instTemp.colonia_inst}</td>
+            </tr>
+            <tr>
+                <td>Ciudad</td>
+                <td>${instTemp.ciudad_inst}</td>
+            </tr>
+            <tr>
+                <td>Estado</td>
+                <td>${instTemp.estado_inst}</td>
+            </tr>
+            <tr>
+                <td>Estado</td>
+                <td>${instTemp.cp_inst}</td>
+            </tr>
         </table>
 
 </div><!-- col-md-6-->
@@ -153,7 +187,7 @@
 <div class="row">
 <div class="col-md-12">
 
-<p>Â©2014 DAW- Arely, Rolando y Carlos</p>
+<p>©2014 DAW- Arely, Rolando y Carlos</p>
 
 <ul>
 <li><a href="https://www.facebook.com/supercompucampo.itesm" target="_blank"><i class="fa fa-facebook"></i></a></li>

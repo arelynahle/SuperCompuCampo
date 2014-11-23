@@ -4,7 +4,7 @@ package Model;
  *
  * @author Carlos Gerardo
  */
-public class director {
+public class Director {
 
     private int id_dir;
     private String nombre_dir;
@@ -13,7 +13,7 @@ public class director {
     private String cel_dir;
     private String email_dir;
 
-    public director(
+    public Director(
             String nombre_dir,
             String ap_dir,
             String am_dir,
@@ -28,7 +28,7 @@ public class director {
         this.email_dir = email_dir;
     }
 
-    public director() {
+    public Director() {
 
     }
 
