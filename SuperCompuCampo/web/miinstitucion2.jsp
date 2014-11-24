@@ -86,6 +86,9 @@
 
 <div class="col-sm-6 col-md-6">
 
+<a href="miinstitucion.jsp"><button>Mi Institución</button></a>
+<br>
+<br>
 
 <h3 class="widgettitle">Datos Generales</h3>
 

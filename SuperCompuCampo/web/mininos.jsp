@@ -13,7 +13,7 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 
-<title>Mi Institución</title>
+<title>Niños Inscritos</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -73,7 +73,7 @@
 
 <section class="page-top wrap">
 
-	<h2 class="page-section-title">Mi Institución</h2>
+	<h2 class="page-section-title">Niños Inscritos</h2>
 
 </section><!-- page-top -->
   <div class="zz-bottom"></div>
@@ -86,8 +86,11 @@
 
 <div class="col-sm-6 col-md-6">
 
+<a href="miinstitucion.jsp"><button>Mi Institución</button></a>
+<br>
+<br>
 
-<h3 class="widgettitle">Datos Generales</h3>
+<h3 class="widgettitle">Lista de niños</h3>
 
 
         <% 
