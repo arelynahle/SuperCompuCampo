@@ -38,23 +38,23 @@ public class InstDAO {
 	
 	 public void addInst (Institucion institucion)  {
 		 try {
-		   statement = connection.prepareStatement("INSERT INTO institucion VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+		   statement = connection.prepareStatement("INSERT INTO institucion (nombre_inst, calle_inst,numero_inst,colonia_inst,cp_inst,ciudad_inst,estado_inst, tel_inst,max_ninos_inst, nombre_dir, ap_dir, am_dir, cel_dir,email_dir) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 		   synchronized(statement) {
-			   statement.setInt(1, institucion.getid_inst());
-			   statement.setString(2, institucion.getnombre_inst());
-			   statement.setString(3, institucion.getcalle_inst());
-                           statement.setInt(4, institucion.getnumero_inst());
-			   statement.setString(5, institucion.getcolonia_inst());
-                           statement.setInt(6, institucion.getcp_inst());
-                           statement.setString(7, institucion.getciudad_inst());
-                           statement.setString(8, institucion.getestado_inst());
-                           statement.setString(9, institucion.gettel_inst());
-                           statement.setInt(10, institucion.getmax_ninos_inst());
-                           statement.setString(11, institucion.getnombre_dir());
-                           statement.setString(12, institucion.getap_dir());
-                           statement.setString(13, institucion.getam_dir());
-                           statement.setString(14, institucion.getcel_dir());
-                           statement.setString(15, institucion.getemail_dir());
+			   //statement.setInt(1, institucion.getid_inst());
+			   statement.setString(1, institucion.getnombre_inst());
+			   statement.setString(2, institucion.getcalle_inst());
+                           statement.setInt(3, institucion.getnumero_inst());
+			   statement.setString(4, institucion.getcolonia_inst());
+                           statement.setInt(5, institucion.getcp_inst());
+                           statement.setString(6, institucion.getciudad_inst());
+                           statement.setString(7, institucion.getestado_inst());
+                           statement.setString(8, institucion.gettel_inst());
+                           statement.setInt(9, institucion.getmax_ninos_inst());
+                           statement.setString(10, institucion.getnombre_dir());
+                           statement.setString(11, institucion.getap_dir());
+                           statement.setString(12, institucion.getam_dir());
+                           statement.setString(13, institucion.getcel_dir());
+                           statement.setString(14, institucion.getemail_dir());
 			   statement.executeUpdate();
 		   }
 		   statement.close();
@@ -100,13 +100,13 @@ public class InstDAO {
 
            	 public void addRes (Responsable responsable)  {
 		 try {
-		   statement = connection.prepareStatement("INSERT INTO responsable VALUES(?,?,?,?,?)");
+		   statement = connection.prepareStatement("INSERT INTO responsable (nombre_res, ap_res,am_res,cel_res) VALUES(?,?,?,?)");
 		   synchronized(statement) {
-                           statement.setInt(1, responsable.getid_res());
-                           statement.setString(2, responsable.getnombre_res());
-			   statement.setString(3, responsable.getap_res());
-                           statement.setString(4, responsable.getam_res());
-                           statement.setString(5, responsable.getcel_res());
+                           //statement.setInt(1, responsable.getid_res());
+                           statement.setString(1, responsable.getnombre_res());
+			   statement.setString(2, responsable.getap_res());
+                           statement.setString(3, responsable.getam_res());
+                           statement.setString(4, responsable.getcel_res());
 			   statement.executeUpdate();
 		   }
 		   statement.close();

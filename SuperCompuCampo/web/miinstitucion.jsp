@@ -88,7 +88,10 @@
     
     <h3>Bienvenido</h3>
     
-    <li><a href="InstServlet?opcion=3">Datos Generales</a><br></li>
+    <li><a href="InstServlet?opcion=3">Consultar Mis Datos</a><br></li>
+    <li><a href="NinoServlet?opcion=3">Consultar Mis Niños</a><br></li>
+
+    
     
 </div><!-- col-md-6-->
 

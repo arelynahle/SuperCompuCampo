@@ -87,7 +87,9 @@ public class NinoServlet extends HttpServlet {
          address="adult.jsp";
          }
          request.setAttribute("usuarioTemp", usuarioTemp);
-         }
+         }*/
+            
+         /*   
          else if (opcion==3)
          {
          ArrayList<user> userListServelet=dao.getUserList();

@@ -71,7 +71,7 @@ public class Nino {
         this.modeloplayera_nino = modeloplayera_nino;
     }    
     
-    public void settallamodelo_nino(String tallaplayera_nino) {
+    public void settallaplayera_nino(String tallaplayera_nino) {
         this.tallaplayera_nino = tallaplayera_nino;
     }        
     

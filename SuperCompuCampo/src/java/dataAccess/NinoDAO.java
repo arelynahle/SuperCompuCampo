@@ -100,5 +100,34 @@ public class NinoDAO {
         }
 
     }
-
+    /*
+        public ArrayList<Nino> geNinoList() {	
+		    ArrayList<Nino> ninoList = new ArrayList<Nino>();
+		    try {
+		         statement = connection.prepareStatement("SELECT * FROM nino");	   
+		         // obtain list of users
+		         synchronized(statement) {
+		            ResultSet results = statement.executeQuery();
+		            // get rows data{
+		            while (results.next()) {
+			           Nino nino = new Nino();
+                                   nino.setnombre_nino(results.getString("nombre_nino"));
+                                   nino.setap_nino(results.getString("ap_nino"));
+                                   nino.setam_nino(results.getString("am_nino"));
+                                   nino.setedad_cron(results.getInt("edad_cron"));
+                                   nino.setmodeloplayera_nino(results.getString("modeloplayera_nino"));
+                                   nino.settallaplayera_nino(results.getString("tallamodelo_nino"));
+                                   nino.setid_inst(results.getString("id_inst"));
+                                   nino.setid_res(results.getString("id_res"));
+                                   nino.setid_con(results.getString("id_con"));
+                                   nino.setid_det(results.getString("id_det"));
+			           ninoList.add(nino);
+		            }
+		        }
+		        statement.close();
+		    } catch(SQLException sqle){
+				 System.out.println(sqle);
+			}	   
+		    return ninoList;
+	   }*/
 }
