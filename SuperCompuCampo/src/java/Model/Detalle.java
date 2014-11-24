@@ -2,11 +2,10 @@ package Model;
 
 public class Detalle {
 
-    private String discapacidad_det, escolaridad_det;
+    private String discapacidad_det, escolaridad_det, tratamiento_det, silla_det;
     private int id_det, edad_men_det;
-    private boolean tratamiento_det, silla_det;
 
-    public Detalle(int id_det, String discapacidad_det, int edad_men_det, String escolaridad_det, boolean tratamiento_det, boolean silla_det) {
+    public Detalle(String discapacidad_det, int edad_men_det, String escolaridad_det, String tratamiento_det, String silla_det) {
 
         this.id_det = id_det;
         this.discapacidad_det = discapacidad_det;
@@ -35,11 +34,11 @@ public class Detalle {
         return (escolaridad_det);
     }
     
-    public boolean gettratamiento_det() {
+    public String gettratamiento_det() {
         return (tratamiento_det);
     }
 
-    public boolean getsilla_det() {
+    public String getsilla_det() {
         return (silla_det);
     }    
     
@@ -59,11 +58,11 @@ public class Detalle {
         this.escolaridad_det = escolaridad_det;
     }    
     
-    public void settratamiento_det(boolean tratamiento_det) {
+    public void settratamiento_det(String tratamiento_det) {
         this.tratamiento_det = tratamiento_det;
     }    
     
-    public void setsilla_det(boolean silla_det) {
+    public void setsilla_det(String silla_det) {
         this.silla_det = silla_det;
     }    
 }

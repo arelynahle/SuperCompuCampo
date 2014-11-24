@@ -42,7 +42,7 @@ public class NinoDAO {
 	
 	 public void addNino (Nino nino)  {
 		 try {
-		   statement = connection.prepareStatement("INSERT INTO nino VALUES(?,?,?,?,?,?,?,?,?,?,?)");
+		   statement = connection.prepareStatement("INSERT INTO nino VALUES(?,?,?,?,?,?,?)");
 		   synchronized(statement) {
 			   statement.setInt(1, nino.getid_nino());
 			   statement.setString(2, nino.getnombre_nino());
@@ -60,5 +60,25 @@ public class NinoDAO {
 		 }
 		   
 	   }
+         
+         	 public void addDet (Detalle detalle)  {
+		 try {
+		   statement = connection.prepareStatement("INSERT INTO detalle VALUES(?,?,?,?,?,?)");
+		   synchronized(statement) {
+			   statement.setInt(1, detalle.getid_det());
+			   statement.setString(2, detalle.getdiscapacidad_det());
+			   statement.setInt(3, detalle.getedad_men_det());
+			   statement.setString(4, detalle.getescolaridad_det());
+                           statement.setString(5, detalle.gettratamiento_det());
+                           statement.setString(6, detalle.getsilla_det());
+			   statement.executeUpdate();
+		   }
+		   statement.close();
+		 } catch(SQLException sqle){
+			 System.out.println(sqle);
+		 }
+		   
+	   }
+         
 
 }

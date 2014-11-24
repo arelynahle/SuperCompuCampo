@@ -34,8 +34,8 @@ public class NinoServlet extends HttpServlet {
             String ap_nino = request.getParameter("ap_nino");
             String am_nino = request.getParameter("am_nino");
             int edad_cron = Integer.parseInt(request.getParameter("edad_cron"));
-            String modeloplayera_nino = request.getParameter("modelo_playera_nino");
-            String tallaplayera_nino = request.getParameter("talleraplayera_nino");
+            String modeloplayera_nino = request.getParameter("modeloplayera_nino");
+            String tallaplayera_nino = request.getParameter("tallaplayera_nino");
             
             //Otros datos
             //int id_inst = Integer.parseInt(request.getParameter("id_inst"));
@@ -43,6 +43,15 @@ public class NinoServlet extends HttpServlet {
             //int id_con = Integer.parseInt(request.getParameter("id_con"));
             //int id_det = Integer.parseInt(request.getParameter("id_det"));
             
+            String discapacidad_det = request.getParameter("discapacidad_det");
+            int edad_men_det = Integer.parseInt(request.getParameter("edad_men_det"));
+            String escolaridad_det = request.getParameter("escolaridad_det");
+            String tratamiento_det = request.getParameter("tratamiento_det");
+            String silla_det = request.getParameter("silla_det");
+           
+            Detalle detalle = new Detalle (discapacidad_det, edad_men_det, escolaridad_det, tratamiento_det, silla_det);
+            dao.addDet(detalle);
+            request.setAttribute("detTemp",detalle);
             Nino ninoNuevo = new Nino (nombre_nino, ap_nino, am_nino, edad_cron, modeloplayera_nino, tallaplayera_nino);
             dao.addNino(ninoNuevo);
             request.setAttribute("ninoTemp", ninoNuevo);

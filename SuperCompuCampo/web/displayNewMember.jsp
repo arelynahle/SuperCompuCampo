@@ -107,9 +107,6 @@
 
 <h5>Aquí te presentamos los datos que introdujiste:</h5>
 
-
-
-
         <table cellspacing="5" cellpadding="5" border="1">
             <tr>
                 <td>Nombre</td>
@@ -135,6 +132,26 @@
                 <td>Talla Playera</td>
                 <td>${ninoTemp.tallaplayera_nino}</td>
             </tr>   
+            <tr>
+                <td>Discapacidad</td>
+                <td>${detTemp.discapacidad_det}</td>
+            </tr>
+            <tr>
+                <td>Edad</td>
+                <td>${detTemp.edad_men_det}</td>
+            </tr>
+            <tr>
+                <td>Escolaridad</td>
+                <td>${detTemp.escolaridad_det}</td>
+            </tr>
+            <tr>
+                <td>Tratamiento</td>
+                <td>${detTemp.tratamiento_det}</td>
+            </tr>    
+            <tr>
+                <td>Silla</td>
+                <td>${detTemp.silla_det}</td>
+            </tr> 
             
    
         </table>
