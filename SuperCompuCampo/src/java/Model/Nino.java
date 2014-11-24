@@ -5,7 +5,7 @@ public class Nino {
     private String nombre_nino, ap_nino, am_nino, modeloplayera_nino, tallaplayera_nino;
     private int id_nino,edad_cron;
 
-    public Nino( String nombre_nino, String ap_nino, String am_nino, int edad_cron, String modeloplayera_nino, String tallaplayera_nino) {
+    public Nino(String nombre_nino, String ap_nino, String am_nino, int edad_cron, String modeloplayera_nino, String tallaplayera_nino) {
 
         this.id_nino = id_nino;
         this.nombre_nino = nombre_nino;

@@ -1,6 +1,7 @@
 package Controller;
 
 import Model.Institucion;
+import Model.Responsable;
 import dataAccess.ConnectionDB;
 import dataAccess.InstDAO;
 import java.io.*;
@@ -26,6 +27,7 @@ public class InstServlet extends HttpServlet {
 
         if (opcion == 1)
         {
+            //Datos institución
             String nombre_inst = request.getParameter("nombre_inst");
             String calle_inst = request.getParameter("calle_inst");
             int numero_inst = Integer.parseInt(request.getParameter("numero_inst"));
@@ -41,9 +43,20 @@ public class InstServlet extends HttpServlet {
             String cel_dir = request.getParameter("cel_dir");
             String email_dir = request.getParameter("email_dir");
 
+            //Datos Responsable
+            String nombre_res = request.getParameter("nombre_res");
+            String ap_res = request.getParameter("ap_res");
+            String am_res = request.getParameter("am_res");
+            String cel_res = request.getParameter("cel_res");
+            
             Institucion instNueva = new Institucion (nombre_inst, calle_inst,numero_inst, colonia_inst, cp_inst, ciudad_inst, estado_inst,tel_inst, max_ninos_inst, nombre_dir,ap_dir,am_dir,cel_dir,email_dir);
-            dao.addInst(instNueva);            
+            dao.addInst(instNueva);        
+            
+            Responsable resNuevo = new Responsable (nombre_res, ap_res, am_res, cel_res);
+            dao.addRes(resNuevo);
+            
             request.setAttribute("instTemp", instNueva);
+            request.setAttribute("resTemp", resNuevo);
             address = "displayNewInst.jsp";
         }
         /*else if (opcion==2)

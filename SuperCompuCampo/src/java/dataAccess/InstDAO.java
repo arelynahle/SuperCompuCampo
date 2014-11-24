@@ -1,6 +1,7 @@
 package dataAccess;
 
 import Model.Institucion;
+import Model.Responsable;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -97,4 +98,24 @@ public class InstDAO {
 		    return institucionList;
 	   }
 
+           	 public void addRes (Responsable responsable)  {
+		 try {
+		   statement = connection.prepareStatement("INSERT INTO responsable VALUES(?,?,?,?,?)");
+		   synchronized(statement) {
+                           statement.setInt(1, responsable.getid_res());
+                           statement.setString(2, responsable.getnombre_res());
+			   statement.setString(3, responsable.getap_res());
+                           statement.setString(4, responsable.getam_res());
+                           statement.setString(5, responsable.getcel_res());
+			   statement.executeUpdate();
+		   }
+		   statement.close();
+		 } catch(SQLException sqle){
+			 System.out.println(sqle);
+		 }
+		   
+	   }
+           
+           
+           
 }

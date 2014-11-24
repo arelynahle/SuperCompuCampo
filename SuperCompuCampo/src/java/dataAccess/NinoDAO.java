@@ -7,16 +7,20 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import Model.Nino;
+import Model.Responsable;
+import Model.Institucion;
+import Model.Contacto;
+import Model.Detalle;
 
-public class UserDAO {
+public class NinoDAO {
 	private PreparedStatement statement;
 	private Connection connection;
 	
-	public UserDAO(){
+	public NinoDAO(){
 		
 	}
 	
-	public UserDAO(Connection  connection){
+	public NinoDAO(Connection  connection){
       this.connection = connection;
 	  try {
 		  PreparedStatement s = connection.prepareStatement("set search_path=perfilesusuarios,pg_catalog,public");
@@ -38,15 +42,15 @@ public class UserDAO {
 	
 	 public void addNino (Nino nino)  {
 		 try {
-		   statement = connection.prepareStatement("INSERT INTO nino VALUES(?,?,?,?,?,?)");
+		   statement = connection.prepareStatement("INSERT INTO nino VALUES(?,?,?,?,?,?,?,?,?,?,?)");
 		   synchronized(statement) {
-			   //statement.setInt(1, nino.getid_nino());
-			   statement.setString(1, nino.getnombre_nino());
-			   statement.setString(2, nino.getap_nino());
-			   statement.setString(3, nino.getam_nino());
-                           statement.setInt(4, nino.getedad_cron());
-                           statement.setString(5, nino.getmodeloplayera_nino());
-                           statement.setString(6, nino.gettallaplayera_nino());
+			   statement.setInt(1, nino.getid_nino());
+			   statement.setString(2, nino.getnombre_nino());
+			   statement.setString(3, nino.getap_nino());
+			   statement.setString(4, nino.getam_nino());
+                           statement.setInt(5, nino.getedad_cron());
+                           statement.setString(6, nino.getmodeloplayera_nino());
+                           statement.setString(7, nino.gettallaplayera_nino());
 
 			   statement.executeUpdate();
 		   }

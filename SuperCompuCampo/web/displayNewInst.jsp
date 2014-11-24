@@ -165,9 +165,29 @@
                 <td>${instTemp.estado_inst}</td>
             </tr>
             <tr>
-                <td>Estado</td>
+                <td>Código Postal</td>
                 <td>${instTemp.cp_inst}</td>
             </tr>
+            <tr>
+                <td>Nombre Responsable</td>
+                <td>${resTemp.nombre_res}</td>
+            </tr>
+                        <tr>
+                <td>Ap res</td>
+                <td>${resTemp.ap_res}</td>
+            </tr>
+                        <tr>
+                <td>Am Postal</td>
+                <td>${resTemp.am_res}</td>
+            </tr>
+            <tr>
+                <td>Celular</td>
+                <td>${resTemp.cel_res}</td>
+            </tr>
+            
+            
+            
+            
         </table>
 
 </div><!-- col-md-6-->
