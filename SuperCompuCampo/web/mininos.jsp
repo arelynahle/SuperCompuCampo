@@ -1,3 +1,7 @@
+<%@page import="Model.Nino"%>
+<%@page import="java.util.ArrayList"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -9,7 +13,7 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 
-<title>¡Alta exitosa!</title>
+<title>Mi InstituciÃ³n</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -39,7 +43,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="clearfix">
-            <div id="logo"><a href="index.html"><img class="img-responsive" src="images/logo.png"/></a></div>
+            <div id="logo"><img class="img-responsive" src="images/logo.png"/></div>
             
             <nav class="navbar navbar-custom" role="navigation">
             <div class="navbar-header">
@@ -48,31 +52,12 @@
             <div class="collapse navbar-collapse" id="collapse-navigation">
             <ul class="nav menu-nav">
               
-                <li><a href="index.html">Inicio</a></li>
+                <li class="current_page_item"><a href="NinoServlet?opcion=3">Mi Institucion</a></li>
                 
-                <li><a href="about.html">Nosotros</a>
-                </li>
+                <li><a href="contact.html">Alta de NiÃ±os</a></li>
+        
                 
-                <li><a href="teachers.html">Equipo</a>
-                </li>
-                
-                <li><a href="patrocinadores.html">Patrocinadores</a>
-                </li>
-                
-                <li><a href="gallery-4col.html">Galería</a>
-               
-                </li>
-      		
-                <li><a>Eventos</a>
-                    <ul class="sub-menu">
-                        <li><a href="curso.html">Curso de Verano</a></li>
-                        <li><a href="posada.html">Posada</a></li>
-                    </ul>
-                </li>
-                
-                <li class="current_page_item"><a href="unete.html">Únete</a></li>
-                
-                 <li><a href="login.html">Log-in</a></li>
+                 <li><a href="index.html">Salir</a></li>
             </ul>
             </div><!-- /.navbar-collapse -->
             
@@ -88,7 +73,7 @@
 
 <section class="page-top wrap">
 
-	<h2 class="page-section-title">Alta Exitosa de Institución</h2>
+	<h2 class="page-section-title">Mi InstituciÃ³n</h2>
 
 </section><!-- page-top -->
   <div class="zz-bottom"></div>
@@ -101,81 +86,50 @@
 
 <div class="col-sm-6 col-md-6">
 
-<h3 class="widgettitle">Gracias por tu Interés</h3>
 
-<p>Hemos recibido tu solicitud, pronto nos pondremos en contacto para hacerte saber la repuesta.</p>
+<h3 class="widgettitle">Datos Generales</h3>
 
-<h5>Aquí te presentamos los datos que introdujiste:</h5>
 
-        <table cellspacing="5" cellpadding="5" border="1">
+        <% 
+            ArrayList<Nino> ninoListJSP=(ArrayList<Nino>) request.getAttribute("ninoList");
+        %>
+
+        <table cellspacing="5" cellpadding="5" border="3">
             <tr>
-                <td>Nombre</td>
-                <td>${ninoTemp.nombre_nino}</td>
+                <th>Id</th>
+                <th>Nombre </th>
+                <th>Apellido Paterno</th>
+                <th>Apellido Materno</th>
+                <th>Edad cronolÃ³gica</th>
+                <th>Modelo playera</th>
+                <th>Talla playera</th>
+                <th>Institucion ID</th>                
+                <th>Responsable ID</th>
+                <th>Contacto ID</th>
+                <th>Detalles ID</th>
             </tr>
+            <%
+            for(Nino nino : ninoListJSP) {
+            %>
             <tr>
-                <td>Apellido Paterno</td>
-                <td>${ninoTemp.ap_nino}</td>
+                <td><%=nino.getid_nino()%></td>
+                <td><%=nino.getnombre_nino()%></td>
+                <td><%=nino.getap_nino()%></td>                                               
+                <td><%=nino.getam_nino()%></td>                                               
+                <td><%=nino.getedad_cron()%></td>                                               
+                <td><%=nino.getmodeloplayera_nino()%></td>                                               
+                <td><%=nino.gettallaplayera_nino()%></td>
+                <td><%=nino.getid_inst()%></td>                                               
+                <td><%=nino.getid_res()%></td>                                               
+                <td><%=nino.getid_con()%></td>                                               
+                <td><%=nino.getid_det()%></td>                                               
+
+
             </tr>
-            <tr>
-                <td>Apellido Materno</td>
-                <td>${ninoTemp.am_nino}</td>
-            </tr>
-            <tr>
-                <td>Edad</td>
-                <td>${ninoTemp.edad_cron}</td>
-            </tr>
-            <tr>
-                <td>Modelo Playera</td>
-                <td>${ninoTemp.modeloplayera_nino}</td>
-            </tr>
-            <tr>
-                <td>Talla Playera</td>
-                <td>${ninoTemp.tallaplayera_nino}</td>
-            </tr>   
-            <tr>
-                <td>Discapacidad</td>
-                <td>${detTemp.discapacidad_det}</td>
-            </tr>
-            <tr>
-                <td>Edad Mental</td>
-                <td>${detTemp.edad_men_det}</td>
-            </tr>
-            <tr>
-                <td>Escolaridad</td>
-                <td>${detTemp.escolaridad_det}</td>
-            </tr>
-            <tr>
-                <td>Tratamiento</td>
-                <td>${detTemp.tratamiento_det}</td>
-            </tr>    
-            <tr>
-                <td>Silla</td>
-                <td>${detTemp.silla_det}</td>
-            </tr> 
-            <tr>
-                <td>Hospital</td>
-                <td>${conTemp.hospital_con}</td>
-            </tr>  
-            <tr>
-                <td>Llamar a: </td>
-                <td>${conTemp.parentesco_con}</td>
-            </tr>              
-            <tr>
-                <td>Nombre Contacto: </td>
-                <td>${conTemp.nombre_con}</td>
-            </tr>    
-            <tr>
-                <td>Telefono Contacto: </td>
-                <td>${conTemp.tel_con}</td>
-            </tr>                
-            <tr>
-                <td>Celuñar Contacto: </td>
-                <td>${conTemp.cel_con}</td>
-            </tr>  
-             <tr>
-                <td>Oficina Contacto: </td>
-                <td>${conTemp.of_con}</td>
-            </tr>             
+        <%
+            }   
+        %>
+            
         </table>
 
 </div><!-- col-md-6-->
@@ -195,7 +149,7 @@
 <div class="row">
 <div class="col-md-12">
 
-<p>©2014 DAW- Arely, Rolando y Carlos</p>
+<p>Â©2014 DAW- Arely, Rolando y Carlos</p>
 
 <ul>
 <li><a href="https://www.facebook.com/supercompucampo.itesm" target="_blank"><i class="fa fa-facebook"></i></a></li>

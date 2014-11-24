@@ -2,7 +2,7 @@ package Model;
 
 public class Nino {
 
-    private String nombre_nino, ap_nino, am_nino, modeloplayera_nino, tallaplayera_nino;
+    private String nombre_nino, ap_nino, am_nino, modeloplayera_nino, tallaplayera_nino, id_inst,id_res, id_con, id_det;
     private int id_nino,edad_cron;
 
     public Nino(String nombre_nino, String ap_nino, String am_nino, int edad_cron, String modeloplayera_nino, String tallaplayera_nino) {
@@ -46,6 +46,22 @@ public class Nino {
     public String gettallaplayera_nino() {
         return (tallaplayera_nino);
     }
+
+    public String getid_inst() {
+        return (id_inst);
+    }   
+    
+    public String getid_res() {
+        return (id_res);
+    }    
+    
+    public String getid_con() {
+        return (id_con);
+    }    
+    
+    public String getid_det() {
+        return (id_det);
+    }    
     
     public void setid_nino(int id_nino){
         this.id_nino=id_nino;
@@ -74,5 +90,21 @@ public class Nino {
     public void settallaplayera_nino(String tallaplayera_nino) {
         this.tallaplayera_nino = tallaplayera_nino;
     }        
+
+    public void setid_inst(String id_inst) {
+        this.id_inst=id_inst;
+    }
+
+    public void setid_res(String id_res) {
+        this.id_res=id_res;
+    }
+
+    public void setid_con(String id_con) {
+        this.id_con=id_con;
+    }
+
+    public void setid_det(String id_det) {
+        this.id_det= id_det;
+    }
     
 }

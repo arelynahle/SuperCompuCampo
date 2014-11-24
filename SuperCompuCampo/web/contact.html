@@ -84,26 +84,26 @@
 
 <div id="contact-form-holder">
 
-    <form id="altanino" name="" method="get"  action="NinoServlet?opcion=1">
+    <form id="altanino" name="" method="get"  action="NinoServlet">
 
                     <h4>Llena los siguientes campos, por favor.</h4>
 
                     <fieldset>       
                         <legend>Datos generales</legend>
                         <label for="nombre_nino"><strong>Nombre(s): &nbsp;<strong></label>
-                        <input name="nombre_nino" type="text"size="20" /><br><br>
+                        <input name="nombre_nino" value="Rolando" type="text"size="20" /><br><br>
                         
                         <label for="ap_nino"><strong>Apellido Paterno: &nbsp;<strong></label>
-                        <input name="ap_nino" type="text"size="20" /><br><br>
+                        <input name="ap_nino" value="Hernández" type="text"size="20" /><br><br>
                         
                         <label for="am_nino"><strong>Apellido Materno: &nbsp;<strong></label>
-                        <input name="am_nino" type="text"size="20" /><br><br>
+                        <input name="am_nino" value="Torres" type="text"size="20" /><br><br>
         
                         <label for="edad_cron">Edad Cronológica: &nbsp;</label>
-                        <input name= "edad_cron" type="number" id="edad_cron"><br><br>
+                        <input name= "edad_cron" value="22" type="number" id="edad_cron"><br><br>
                      
                         <label for="edadMental">Edad Mental: &nbsp;</label>
-                        <input name= "edad_men_det" type="number" id="edadMental"><br><br>
+                        <input name= "edad_men_det" value="22" type="number" id="edadMental"><br><br>
                         
                         <label for="id_inst">Institución ID: &nbsp;</label>
                         <input name= "id_inst" type="number" id="id_inst"><br><br>
@@ -141,9 +141,7 @@
                     <fieldset>       
                         <legend>Datos médicos: </legend>
                     <label>¿Está bajo tratamiento médico?</label><br>
-                       <input type="radio" name="tratamiento_det" value="si"> <label><strong>Sí, </strong></label>
-                       <label for="cual"><strong>¿cuál?:&nbsp;<strong></label>
-                       <input name="cual" type="text" size="20" /><br>
+                        <input type="radio" name="tratamiento_det" value="si"> <label><strong>Sí</strong></label><br>
                        <input type="radio" name="tratamiento_det" value="no"> <label><strong>No</strong></label><br><br>
 
                        <label>¿Usa silla de ruedas?</label><br>
@@ -156,20 +154,19 @@
                     <fieldset>
                         <legend>En caso de emergencia, </legend>
                       <label>¿Cuál sería el hospital más adecuado para trasladarlo?</label>
-                        <input name="hospital_con" type="text"size="40" /><br><br>
+                        <input name="hospital_con" value="Angeles" type="text"size="40" /><br><br>
                         <label>Llamar a: </label><br>
                         <input type="radio" name="parentesco_con" value="papa"> <label><strong>Papá</strong></label><br>
                         <input type="radio" name="parentesco_con" value="mama"> <label><strong>Mamá</strong></label><br>
-                        <input type="radio" name="parentesco_con" value="otro"> <label><strong>Otro:&nbsp </strong></label>
-                        <input name="cual1" type="text" size="20"/><br><br>
+                        <input type="radio" name="parentesco_con" value="otro"> <label><strong>Otro:&nbsp </strong></label><br><br>
                         <label for ="nombre_con"<strong>Nombre: &nbsp;<strong></label>
-                        <input name="nombre_con" type="text" size="40"/><br><br>
+                        <input name="nombre_con" value="Arely" type="text" size="40"/><br><br>
                         <label for="telefono"><strong>Telefono:&nbsp;<strong></label>
-                        <input name="tel_con" type="text"size="40"/><br><br>
+                        <input name="tel_con" value="8717321111" type="text"size="40"/><br><br>
                         <label for="celular"><strong>Celular:&nbsp;<strong></label>
-                        <input name="cel_con" type="text"size="40"/><br><br>
+                        <input name="cel_con" value="87173212" type="text"size="40"/><br><br>
                         <label for="oficina"><strong>Oficina:&nbsp;<strong></label>
-                        <input name="of_con" type="text"size="40"/><br><br>
+                        <input name="of_con" value="8717321113" type="text"size="40"/><br><br>
                   </fieldset>
                   <!--fieldset>
                     <label for="responsable"><strong>Responsable de la institución:&nbsp;<strong></label>
@@ -191,6 +188,10 @@
                         <input class="submit" type="submit" value="Submit"/>
                         <input class="reset" type="reset" value="Limpiar"/>
                    </p>
+                   
+                <tr>
+                    <td><input type="hidden" value="1" name="opcion" /></td>
+                </tr>
 
                 </form>
 	</div><!-- contact-form-holder-->

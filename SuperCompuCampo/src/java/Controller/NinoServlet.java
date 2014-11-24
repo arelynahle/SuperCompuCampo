@@ -26,10 +26,10 @@ public class NinoServlet extends HttpServlet {
         Connection con = connection.getConnectionDB();
         String address = null;
         NinoDAO dao = new NinoDAO(con);
-        //int opcion = Integer.parseInt(request.getParameter("opcion"));
+        int opcion = Integer.parseInt(request.getParameter("opcion"));
 
-        //if (opcion == 1)
-        
+        if (opcion == 1)
+        {
             //int id_nino = Integer.parseInt(request.getParameter("id_nino"));
             String nombre_nino = request.getParameter("nombre_nino");
             String ap_nino = request.getParameter("ap_nino");
@@ -69,7 +69,7 @@ public class NinoServlet extends HttpServlet {
             dao.addNino(ninoNuevo);
             request.setAttribute("ninoTemp", ninoNuevo);
             address = "displayNewMember.jsp";
-            
+        }
         /*else if (opcion==2)
          {
          String email = request.getParameter("email");
@@ -88,14 +88,13 @@ public class NinoServlet extends HttpServlet {
          }
          request.setAttribute("usuarioTemp", usuarioTemp);
          }*/
-            
-         /*   
+           
          else if (opcion==3)
          {
-         ArrayList<user> userListServelet=dao.getUserList();
-         request.setAttribute("userList", userListServelet);
-         address="displayAll.jsp";   
-         }*/
+         ArrayList<Nino> userListServelet=dao.getNinoList();
+         request.setAttribute("ninoList", userListServelet);
+         address="mininos.jsp";   
+         }
 
         RequestDispatcher dispatcher = request.getRequestDispatcher(address);
         dispatcher.forward(request, response);
