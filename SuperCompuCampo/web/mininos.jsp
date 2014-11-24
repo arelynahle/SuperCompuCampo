@@ -52,7 +52,7 @@
             <div class="collapse navbar-collapse" id="collapse-navigation">
             <ul class="nav menu-nav">
               
-                <li class="current_page_item"><a href="NinoServlet?opcion=3">Mi Institucion</a></li>
+                <li class="current_page_item"><a href="miinstitucion.jsp">Mi Institucion</a></li>
                 
                 <li><a href="contact.html">Alta de Niños</a></li>
         

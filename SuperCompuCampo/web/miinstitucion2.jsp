@@ -52,7 +52,7 @@
             <div class="collapse navbar-collapse" id="collapse-navigation">
             <ul class="nav menu-nav">
               
-                <li class="current_page_item"><a href="InstServlet?opcion=3">Mi Institucion</a></li>
+                <li class="current_page_item"><a href="miinstitucion.jsp">Mi Institucion</a></li>
                 
                 <li><a href="contact.html">Alta de Niños</a></li>
         
@@ -95,43 +95,82 @@
         %>
 
         <table cellspacing="5" cellpadding="5" border="3">
-            <tr>
-                <th>Id</th>
-                <th>Nombre </th>
-                <th>Calle</th>
-                <th>Numero</th>
-                <th>Colonia</th>
-                <th>CP</th>
-                <th>Ciudad</th>                
-                <th>Estado</th>
-                <th>Teléfono</th>
-                <th>Máximo de niños</th>
-                <th>Nombre Director</th>
-                <th>Apellido Paterno</th>
-                <th>Apellido Materno</th>
-                <th>Celular</th>
-                <th>Email</th>
-            </tr>
             <%
             for(Institucion institucion : institucionListJSP) {
             %>
             <tr>
-                
+                <th>Id</th>
                 <td><%=institucion.getid_inst()%></td>
+            </tr> 
+             <tr>
+                <th>Nombre</th>
                 <td><%=institucion.getnombre_inst()%></td>
+            </tr> 
+            <tr>
+                <th>Calle</th>
                 <td><%=institucion.getcalle_inst()%></td>
+            </tr> 
+            <tr>
+                <th>Número</th>
                 <td><%=institucion.getnumero_inst()%></td>
-                <td><%=institucion.getcp_inst()%></td>                
-                <td><%=institucion.getcolonia_inst()%></td>
+            </tr> 
+            <tr>
+                <th>Colonia</th>
+                <td><%=institucion.getcolonia_inst()%></td> 
+            </tr> 
+            <tr>
+                <th>CP</th>
+                <td><%=institucion.getcp_inst()%></td>
+            </tr> 
+            <tr>
+                <th>Ciudad</th>
                 <td><%=institucion.getciudad_inst()%></td> 
+            </tr> 
+            <tr>
+                <th>Estado</th>
                 <td><%=institucion.getestado_inst()%></td>
+            </tr> 
+            <tr>
+                <th>Teléfono</th>
                 <td><%=institucion.gettel_inst()%></td> 
+            </tr> 
+            <tr>
+                <th>Max. Niños</th>
                 <td><%=institucion.getmax_ninos_inst()%></td>
+            </tr>
+        <%
+            }   
+        %>
+            
+        </table>
+        
+        <br>
+        <br>
+        
+        <h3 class="widgettitle">Datos del Director</h3>
+        <table cellspacing="5" cellpadding="5" border="3">
+            <%
+            for(Institucion institucion : institucionListJSP) {
+            %>
+            <tr>
+                <th>Nombre</th>
                 <td><%=institucion.getnombre_dir()%></td> 
-                <td><%=institucion.getap_dir()%></td>   
+            </tr>
+            <tr>
+                <th>Apellido Paterno</th>
+                <td><%=institucion.getap_dir()%></td>  
+            </tr>
+            <tr>
+                <th>Apellido Materno</th>
                 <td><%=institucion.getam_dir()%></td>   
-                <td><%=institucion.getcel_dir()%></td>   
-                <td><%=institucion.getemail_dir()%></td>                                                
+            </tr>
+            <tr>
+                <th>Celular</th>
+                <td><%=institucion.getcel_dir()%></td> 
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td><%=institucion.getemail_dir()%></td>  
             </tr>
         <%
             }   

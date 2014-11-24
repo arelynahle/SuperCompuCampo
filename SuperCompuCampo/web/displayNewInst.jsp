@@ -109,74 +109,90 @@
 
 
 
-
+        <h5>Institución</h5>
         <table cellspacing="5" cellpadding="5" border="1">
             
             <tr>
-                <td nowrap>Nombre</td>
-                <td nowrap>${instTemp.nombre_inst}</td>
+                <td>Nombre</td>
+                <td>${instTemp.nombre_inst}</td>
             </tr>
             <tr>
-                <td nowrap>Teléfono</td>
-                <td nowrap>${instTemp.tel_inst}</td>
+                <td>Teléfono</td>
+                <td>${instTemp.tel_inst}</td>
             </tr>
             <tr>
-                <td nowrap>Máximo de Niños</td>
-                <td nowrap>${instTemp.tel_inst}</td>
+                <td>Máximo de Niños</td>
+                <td>${instTemp.max_ninos_inst}</td>
+            </tr>
+        </table> 
+           
+        <br>    
+        <h5>Director</h5>
+        <table cellspacing="5" cellpadding="5" border="1">    
+            <tr>
+                <td>Nombre</td>
+                <td>${instTemp.nombre_dir}</td>
             </tr>
             <tr>
-                <td nowrap>Nombre Director</td>
-                <td nowrap>${instTemp.nombre_dir}</td>
+                <td>Apellido Paterno</td>
+                <td>${instTemp.ap_dir}</td>
             </tr>
             <tr>
-                <td nowrap>Director Apellido Paterno</td>
-                <td nowrap>${instTemp.ap_dir}</td>
+                <td>Apellido Materno</td>
+                <td>${instTemp.am_dir}</td>
             </tr>
             <tr>
-                <td nowrap>Director Apellido Materno</td>
-                <td nowrap>${instTemp.am_dir}</td>
+                <td>Celular</td>
+                <td>${instTemp.cel_dir}</td>
             </tr>
             <tr>
-                <td nowrap>Celular Director</td>
-                <td nowrap>${instTemp.cel_dir}</td>
+                <td>Email</td>
+                <td>${instTemp.email_dir}</td>
+            </tr>
+        </table>
+        
+        <br>    
+        <h5>DIrección</h5>
+        <table cellspacing="5" cellpadding="5" border="1">              
+            <tr>
+                <td>Calle</td>
+                <td>${instTemp.calle_inst}</td>
             </tr>
             <tr>
-                <td nowrap>Email Director</td>
-                <td nowrap>${instTemp.email_dir}</td>
+                <td>Numero</td>
+                <td>${instTemp.numero_inst}</td>
             </tr>
             <tr>
-                <td nowrap>Calle</td>
-                <td nowrap>${instTemp.calle_inst}</td>
+                <td>Colonia</td>
+                <td>${instTemp.colonia_inst}</td>
             </tr>
             <tr>
-                <td nowrap>Numero</td>
-                <td nowrap>${instTemp.numero_inst}</td>
+                <td>Ciudad</td>
+                <td>${instTemp.ciudad_inst}</td>
             </tr>
             <tr>
-                <td nowrap>Colonia</td>
-                <td nowrap>${instTemp.colonia_inst}</td>
-            </tr>
-            <tr>
-                <td nowrap>Ciudad</td>
-                <td nowrap>${instTemp.ciudad_inst}</td>
-            </tr>
-            <tr>
-                <td nowrap>Estado</td>
-                <td nowrap>${instTemp.estado_inst}</td>
+                <td>Estado</td>
+                <td>${instTemp.estado_inst}</td>
             </tr>
             <tr>
                 <td>Código Postal</td>
                 <td>${instTemp.cp_inst}</td>
+            </tr>
+        </table>   
+            
+        <br>    
+        <h5>Responsable</h5>
+        <table cellspacing="5" cellpadding="5" border="1">  
             <tr>
-                <td>Nombre Responsable</td>
+                <td>Nombre</td>
                 <td>${resTemp.nombre_res}</td>
             </tr>
                         <tr>
-                <td>Ap res</td>
+                <td>Apellido Paterno</td>
                 <td>${resTemp.ap_res}</td>
             </tr>
-                        <tr>
-                <td>Am Postal</td>
+            <tr>
+                <td>Apellido Materno</td>
                 <td>${resTemp.am_res}</td>
             </tr>
             <tr>
