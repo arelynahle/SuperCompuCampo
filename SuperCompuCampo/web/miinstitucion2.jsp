@@ -85,11 +85,60 @@
 <div class="row">
 
 <div class="col-sm-6 col-md-6">
-    
-    <h3>Bienvenido</h3>
-    
-    <li><a href="InstServlet?opcion=3">Datos Generales</a><br></li>
-    
+
+
+<h3 class="widgettitle">Datos Generales</h3>
+
+
+        <% 
+            ArrayList<Institucion> institucionListJSP=(ArrayList<Institucion>) request.getAttribute("institucionList");
+        %>
+
+        <table cellspacing="5" cellpadding="5" border="3">
+            <tr>
+                <th>Id</th>
+                <th>Nombre </th>
+                <th>Calle</th>
+                <th>Numero</th>
+                <th>Colonia</th>
+                <th>CP</th>
+                <th>Ciudad</th>                
+                <th>Estado</th>
+                <th>Teléfono</th>
+                <th>Máximo de niños</th>
+                <th>Nombre Director</th>
+                <th>Apellido Paterno</th>
+                <th>Apellido Materno</th>
+                <th>Celular</th>
+                <th>Email</th>
+            </tr>
+            <%
+            for(Institucion institucion : institucionListJSP) {
+            %>
+            <tr>
+                
+                <td><%=institucion.getid_inst()%></td>
+                <td><%=institucion.getnombre_inst()%></td>
+                <td><%=institucion.getcalle_inst()%></td>
+                <td><%=institucion.getnumero_inst()%></td>
+                <td><%=institucion.getcp_inst()%></td>                
+                <td><%=institucion.getcolonia_inst()%></td>
+                <td><%=institucion.getciudad_inst()%></td> 
+                <td><%=institucion.getestado_inst()%></td>
+                <td><%=institucion.gettel_inst()%></td> 
+                <td><%=institucion.getmax_ninos_inst()%></td>
+                <td><%=institucion.getnombre_dir()%></td> 
+                <td><%=institucion.getap_dir()%></td>   
+                <td><%=institucion.getam_dir()%></td>   
+                <td><%=institucion.getcel_dir()%></td>   
+                <td><%=institucion.getemail_dir()%></td>                                                
+            </tr>
+        <%
+            }   
+        %>
+            
+        </table>
+
 </div><!-- col-md-6-->
 
 </div><!--row-->

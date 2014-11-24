@@ -81,7 +81,7 @@ public class InstServlet extends HttpServlet {
          {
          ArrayList<Institucion> userListServelet=dao.getInstitucionList();
          request.setAttribute("institucionList", userListServelet);
-         address="miinstitucion.jsp";   
+         address="miinstitucion2.jsp";   
          }
 
         RequestDispatcher dispatcher = request.getRequestDispatcher(address);
