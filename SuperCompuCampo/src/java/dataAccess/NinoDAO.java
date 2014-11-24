@@ -13,72 +13,92 @@ import Model.Contacto;
 import Model.Detalle;
 
 public class NinoDAO {
-	private PreparedStatement statement;
-	private Connection connection;
-	
-	public NinoDAO(){
-		
-	}
-	
-	public NinoDAO(Connection  connection){
-      this.connection = connection;
-	  try {
-		  PreparedStatement s = connection.prepareStatement("set search_path=perfilesusuarios,pg_catalog,public");
-		  s.execute();
-	  } catch (SQLException sqle){
-	    	 sqle.printStackTrace();
-	  } catch (Exception e){
-	    	 e.printStackTrace();
-	  }
-	}
 
-	public Connection getConnection(){
-		return connection;
-	}
-		
-	public void setConnection(Connection connection){
-	   this.connection = connection;
-	}
-	
-	 public void addNino (Nino nino)  {
-		 try {
-		   statement = connection.prepareStatement("INSERT INTO nino VALUES(?,?,?,?,?,?,?)");
-		   synchronized(statement) {
-			   statement.setInt(1, nino.getid_nino());
-			   statement.setString(2, nino.getnombre_nino());
-			   statement.setString(3, nino.getap_nino());
-			   statement.setString(4, nino.getam_nino());
-                           statement.setInt(5, nino.getedad_cron());
-                           statement.setString(6, nino.getmodeloplayera_nino());
-                           statement.setString(7, nino.gettallaplayera_nino());
+    private PreparedStatement statement;
+    private Connection connection;
 
-			   statement.executeUpdate();
-		   }
-		   statement.close();
-		 } catch(SQLException sqle){
-			 System.out.println(sqle);
-		 }
-		   
-	   }
-         
-         	 public void addDet (Detalle detalle)  {
-		 try {
-		   statement = connection.prepareStatement("INSERT INTO detalle VALUES(?,?,?,?,?,?)");
-		   synchronized(statement) {
-			   statement.setInt(1, detalle.getid_det());
-			   statement.setString(2, detalle.getdiscapacidad_det());
-			   statement.setInt(3, detalle.getedad_men_det());
-			   statement.setString(4, detalle.getescolaridad_det());
-                           statement.setString(5, detalle.gettratamiento_det());
-                           statement.setString(6, detalle.getsilla_det());
-			   statement.executeUpdate();
-		   }
-		   statement.close();
-		 } catch(SQLException sqle){
-			 System.out.println(sqle);
-		 }
-		   
-	   }
-         
+    public NinoDAO() {
+
+    }
+
+    public NinoDAO(Connection connection) {
+        this.connection = connection;
+        try {
+            PreparedStatement s = connection.prepareStatement("set search_path=perfilesusuarios,pg_catalog,public");
+            s.execute();
+        } catch (SQLException sqle) {
+            sqle.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public Connection getConnection() {
+        return connection;
+    }
+
+    public void setConnection(Connection connection) {
+        this.connection = connection;
+    }
+
+    public void addNino(Nino nino) {
+        try {
+            statement = connection.prepareStatement("INSERT INTO nino VALUES(?,?,?,?,?,?,?)");
+            synchronized (statement) {
+                statement.setInt(1, nino.getid_nino());
+                statement.setString(2, nino.getnombre_nino());
+                statement.setString(3, nino.getap_nino());
+                statement.setString(4, nino.getam_nino());
+                statement.setInt(5, nino.getedad_cron());
+                statement.setString(6, nino.getmodeloplayera_nino());
+                statement.setString(7, nino.gettallaplayera_nino());
+
+                statement.executeUpdate();
+            }
+            statement.close();
+        } catch (SQLException sqle) {
+            System.out.println(sqle);
+        }
+
+    }
+
+    public void addDet(Detalle detalle) {
+        try {
+            statement = connection.prepareStatement("INSERT INTO detalle VALUES(?,?,?,?,?,?)");
+            synchronized (statement) {
+                statement.setInt(1, detalle.getid_det());
+                statement.setString(2, detalle.getdiscapacidad_det());
+                statement.setInt(3, detalle.getedad_men_det());
+                statement.setString(4, detalle.getescolaridad_det());
+                statement.setString(5, detalle.gettratamiento_det());
+                statement.setString(6, detalle.getsilla_det());
+                statement.executeUpdate();
+            }
+            statement.close();
+        } catch (SQLException sqle) {
+            System.out.println(sqle);
+        }
+
+    }
+
+    public void addCon(Contacto contacto) {
+        try {
+            statement = connection.prepareStatement("INSERT INTO contacto VALUES(?,?,?,?,?,?,?)");
+            synchronized (statement) {
+                statement.setInt(1, contacto.getid_con());
+                statement.setString(2, contacto.gethospital_con());
+                statement.setString(3, contacto.getparentesco_con());
+                statement.setString(4, contacto.getnombre_con());
+                statement.setString(5, contacto.gettel_con());
+                statement.setString(6, contacto.getcel_con());
+                statement.setString(7, contacto.getof_con());
+                statement.executeUpdate();
+            }
+            statement.close();
+        } catch (SQLException sqle) {
+            System.out.println(sqle);
+        }
+
+    }
 
 }

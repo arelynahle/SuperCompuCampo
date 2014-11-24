@@ -3,6 +3,7 @@ package Controller;
 import Model.Nino;
 import Model.Institucion;
 import Model.Responsable;
+import Model.Contacto;
 import Model.Detalle;
 import dataAccess.ConnectionDB;
 import dataAccess.NinoDAO;
@@ -48,10 +49,22 @@ public class NinoServlet extends HttpServlet {
             String escolaridad_det = request.getParameter("escolaridad_det");
             String tratamiento_det = request.getParameter("tratamiento_det");
             String silla_det = request.getParameter("silla_det");
+            
+            String hospital_con = request.getParameter("hospital_con");
+            String parentesco_con = request.getParameter("parentesco_con");
+            String nombre_con = request.getParameter("nombre_con");
+            String tel_con = request.getParameter("tel_con");
+            String cel_con = request.getParameter("cel_con");
+            String of_con = request.getParameter("of_con");
            
             Detalle detalle = new Detalle (discapacidad_det, edad_men_det, escolaridad_det, tratamiento_det, silla_det);
             dao.addDet(detalle);
             request.setAttribute("detTemp",detalle);
+            Contacto contacto = new Contacto (hospital_con, parentesco_con, nombre_con, tel_con, cel_con, of_con);
+            dao.addCon(contacto);
+            request.setAttribute("conTemp",contacto);
+            
+            
             Nino ninoNuevo = new Nino (nombre_nino, ap_nino, am_nino, edad_cron, modeloplayera_nino, tallaplayera_nino);
             dao.addNino(ninoNuevo);
             request.setAttribute("ninoTemp", ninoNuevo);

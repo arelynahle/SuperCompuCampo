@@ -5,7 +5,7 @@ public class Contacto {
     private String hospital_con, parentesco_con, nombre_con, tel_con, cel_con, of_con;
     private int id_con;
 
-    public Contacto(int id_con, String hospital_con, String parentesco_con, String nombre_con, String tel_con, String cel_con, String of_con) {
+    public Contacto(String hospital_con, String parentesco_con, String nombre_con, String tel_con, String cel_con, String of_con) {
 
         this.id_con = id_con;
         this.hospital_con = hospital_con;

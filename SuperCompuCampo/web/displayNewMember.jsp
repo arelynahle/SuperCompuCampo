@@ -152,8 +152,30 @@
                 <td>Silla</td>
                 <td>${detTemp.silla_det}</td>
             </tr> 
-            
-   
+            <tr>
+                <td>Hospital</td>
+                <td>${conTemp.hospital_con}</td>
+            </tr>  
+            <tr>
+                <td>Llamar a: </td>
+                <td>${conTemp.parentesco_con}</td>
+            </tr>              
+            <tr>
+                <td>Nombre Contacto: </td>
+                <td>${conTemp.nombre_con}</td>
+            </tr>    
+            <tr>
+                <td>Telefono Contacto: </td>
+                <td>${conTemp.tel_con}</td>
+            </tr>                
+            <tr>
+                <td>Celuñar Contacto: </td>
+                <td>${conTemp.cel_con}</td>
+            </tr>  
+             <tr>
+                <td>Oficina Contacto: </td>
+                <td>${conTemp.of_con}</td>
+            </tr>             
         </table>
 
 </div><!-- col-md-6-->
