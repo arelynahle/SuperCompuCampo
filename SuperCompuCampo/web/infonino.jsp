@@ -130,6 +130,9 @@
         %-->
             
         </table>
+                <br>
+        <br>
+        <a href="editarnino.jsp"><button>Editar Información</button></a>
 
 </div><!-- col-md-6-->
 

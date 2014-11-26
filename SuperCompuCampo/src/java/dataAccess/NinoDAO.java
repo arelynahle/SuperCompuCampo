@@ -154,4 +154,21 @@ public class NinoDAO {
 			}	   
 		    return nino;
 	   }
+        
+         public Nino deleteNino(String nombre_nino) {	
+		    Nino nino = null;
+		    try {
+		         statement = connection.prepareStatement("DELETE * FROM nino WHERE nombre_nino = ?");	   
+		         statement.setString(1, nombre_nino);
+		         // obtain user
+		         synchronized(statement) {
+		            ResultSet results = statement.executeQuery();
+		            // get rows data{
+		        }
+		        statement.close();
+		    } catch(SQLException sqle){
+				 System.out.println(sqle);
+			}	   
+		    return nino;
+	   }
 }

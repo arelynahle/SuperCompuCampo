@@ -86,7 +86,7 @@
 
 <div class="col-sm-6 col-md-6">
 
-<a href="miinstitucion.jsp"><button>Mi Institución</button></a>
+<a href="miinstitucion.jsp"><button>Regresar</button></a>
 <br>
 <br>
 

@@ -73,7 +73,9 @@
 
 <section class="page-top wrap">
 
-	<h2 class="page-section-title">Niños Inscritos</h2>
+
+
+<h2 class="page-section-title">Niños Inscritos</h2>
 
 </section><!-- page-top -->
   <div class="zz-bottom"></div>
@@ -86,7 +88,7 @@
 
 <div class="col-sm-6 col-md-6">
 
-<a href="miinstitucion.jsp"><button>Mi Institución</button></a>
+<a href="miinstitucion.jsp"><button>Regresar</button></a>
 <br>
 <br>
 
