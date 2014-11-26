@@ -73,7 +73,7 @@
 
 <section class="page-top wrap">
 
-	<h2 class="page-section-title">Niños Inscritos</h2>
+	<h2 class="page-section-title">Consulta de Niños</h2>
 
 </section><!-- page-top -->
   <div class="zz-bottom"></div>
@@ -85,33 +85,14 @@
 <div class="row">
 
 <div class="col-sm-6 col-md-6">
-
-<a href="miinstitucion.jsp"><button>Mi Institución</button></a>
+    
+<a href="NinoServlet?opcion=3"><button>Regresar</button></a>
 <br>
-<br>
+<br>    
 
-<p>Ver detalles de un niño</p>        
-        <form action="NinoServlet" method="get">
-            <table cellspacing="5" border="0">
-                <tr>
-                    <td align="right">Nombre:</td>
-                    <td><input type="text" name="nombre_nino"></td>
-                    <td><input type="submit" value="Buscar"></td>
-                </tr>
-                <tr>
-                    <td><input type="hidden" value="2" name="opcion" /></td>
-                </tr>
-            </table>
-        </form>
+<h3 class="widgettitle">Información del niño</h3>
 
-
-<h3 class="widgettitle">Lista de niños</h3>
-
-
-        <% 
-            ArrayList<Nino> ninoListJSP=(ArrayList<Nino>) request.getAttribute("ninoList");
-        %>
-
+        
         <table cellspacing="5" cellpadding="5" border="3">
             <tr>
                 <th>Id</th>
@@ -126,27 +107,27 @@
                 <th>Contacto ID</th>
                 <th>Detalles ID</th>
             </tr>
-            <%
+            <!--%
             for(Nino nino : ninoListJSP) {
-            %>
+            %-->
             <tr>
-                <td><%=nino.getid_nino()%></td>
-                <td><%=nino.getnombre_nino()%></td>
-                <td><%=nino.getap_nino()%></td>                                               
-                <td><%=nino.getam_nino()%></td>                                               
-                <td><%=nino.getedad_cron()%></td>                                               
-                <td><%=nino.getmodeloplayera_nino()%></td>                                               
-                <td><%=nino.gettallaplayera_nino()%></td>
-                <td><%=nino.getid_inst()%></td>                                               
-                <td><%=nino.getid_res()%></td>                                               
-                <td><%=nino.getid_con()%></td>                                               
-                <td><%=nino.getid_det()%></td>                                               
+                <td>${ninoTemp.id_nino}</td>
+                <td>${ninoTemp.nombre_nino}</td>
+                <td>${ninoTemp.ap_nino}</td>                                               
+                <td>${ninoTemp.am_nino}</td>                                               
+                <td>${ninoTemp.edad_cron}</td>                                               
+                <td>${ninoTemp.modeloplayera_nino}</td>                                               
+                <td>${ninoTemp.tallaplayera_nino}</td>
+                <td>${ninoTemp.id_inst}</td>                                               
+                <td>${ninoTemp.id_res}</td>                                               
+                <td>${ninoTemp.id_con}</td>                                               
+                <td>${ninoTemp.id_det}</td>                                             
 
 
             </tr>
-        <%
+        <!--%
             }   
-        %>
+        %-->
             
         </table>
 

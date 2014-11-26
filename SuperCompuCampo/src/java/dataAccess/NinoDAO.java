@@ -127,4 +127,31 @@ public class NinoDAO {
 			}	   
 		    return ninoList;
 	   }
+        
+        public Nino searchNino(String nombre_nino) {	
+		    Nino nino = null;
+		    try {
+		         statement = connection.prepareStatement("SELECT * FROM nino WHERE nombre_nino = ?");	   
+		         statement.setString(1, nombre_nino);
+		         // obtain user
+		         synchronized(statement) {
+		            ResultSet results = statement.executeQuery();
+		            // get rows data{
+			  		  
+		            while (results.next()) {	            	
+			           nino = new Nino();
+                                   nino.setnombre_nino(results.getString("nombre_nino"));
+                                   nino.setap_nino(results.getString("ap_nino"));
+                                   nino.setam_nino(results.getString("am_nino"));
+                                   nino.setedad_cron(results.getInt("edad_cron"));
+                                   nino.setmodeloplayera_nino(results.getString("modeloplayera_nino"));
+                                   nino.settallaplayera_nino(results.getString("tallaplayera_nino"));
+		            }
+		        }
+		        statement.close();
+		    } catch(SQLException sqle){
+				 System.out.println(sqle);
+			}	   
+		    return nino;
+	   }
 }

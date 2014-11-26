@@ -13,7 +13,7 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 
-<title>Niños Inscritos</title>
+<title>Niño no registrado</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -73,7 +73,7 @@
 
 <section class="page-top wrap">
 
-	<h2 class="page-section-title">Niños Inscritos</h2>
+	<h2 class="page-section-title">Error</h2>
 
 </section><!-- page-top -->
   <div class="zz-bottom"></div>
@@ -85,70 +85,13 @@
 <div class="row">
 
 <div class="col-sm-6 col-md-6">
+    
+<h5 class="widgettitle">Niño no encontrado en la Base de Datos</h5>    
 
-<a href="miinstitucion.jsp"><button>Mi Institución</button></a>
+<a href="NinoServlet?opcion=3"><button>Regresar</button></a>
 <br>
 <br>
 
-<p>Ver detalles de un niño</p>        
-        <form action="NinoServlet" method="get">
-            <table cellspacing="5" border="0">
-                <tr>
-                    <td align="right">Nombre:</td>
-                    <td><input type="text" name="nombre_nino"></td>
-                    <td><input type="submit" value="Buscar"></td>
-                </tr>
-                <tr>
-                    <td><input type="hidden" value="2" name="opcion" /></td>
-                </tr>
-            </table>
-        </form>
-
-
-<h3 class="widgettitle">Lista de niños</h3>
-
-
-        <% 
-            ArrayList<Nino> ninoListJSP=(ArrayList<Nino>) request.getAttribute("ninoList");
-        %>
-
-        <table cellspacing="5" cellpadding="5" border="3">
-            <tr>
-                <th>Id</th>
-                <th>Nombre </th>
-                <th>Apellido Paterno</th>
-                <th>Apellido Materno</th>
-                <th>Edad cronológica</th>
-                <th>Modelo playera</th>
-                <th>Talla playera</th>
-                <th>Institucion ID</th>                
-                <th>Responsable ID</th>
-                <th>Contacto ID</th>
-                <th>Detalles ID</th>
-            </tr>
-            <%
-            for(Nino nino : ninoListJSP) {
-            %>
-            <tr>
-                <td><%=nino.getid_nino()%></td>
-                <td><%=nino.getnombre_nino()%></td>
-                <td><%=nino.getap_nino()%></td>                                               
-                <td><%=nino.getam_nino()%></td>                                               
-                <td><%=nino.getedad_cron()%></td>                                               
-                <td><%=nino.getmodeloplayera_nino()%></td>                                               
-                <td><%=nino.gettallaplayera_nino()%></td>
-                <td><%=nino.getid_inst()%></td>                                               
-                <td><%=nino.getid_res()%></td>                                               
-                <td><%=nino.getid_con()%></td>                                               
-                <td><%=nino.getid_det()%></td>                                               
-
-
-            </tr>
-        <%
-            }   
-        %>
-            
-        </table>
 
 </div><!-- col-md-6-->
 

@@ -147,6 +147,8 @@
             
         </table>
         
+
+        
         <br>
         <br>
         
@@ -180,7 +182,9 @@
         %>
             
         </table>
-
+        <br>
+        <br>
+        <a href="editarinst.jsp"><button>Editar Información</button></a>
 </div><!-- col-md-6-->
 
 </div><!--row-->

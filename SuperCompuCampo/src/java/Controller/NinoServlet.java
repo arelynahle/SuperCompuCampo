@@ -70,24 +70,24 @@ public class NinoServlet extends HttpServlet {
             request.setAttribute("ninoTemp", ninoNuevo);
             address = "displayNewMember.jsp";
         }
-        /*else if (opcion==2)
+        else if (opcion==2)
          {
-         String email = request.getParameter("email");
-         user usuarioTemp = dao.searchUser(email);
-         if (usuarioTemp==null){
-         address="unknown.jsp";
+         String nombre_nino =request.getParameter("nombre_nino");
+            Nino ninoNuevo = dao.searchNino(nombre_nino);
+            //String titulo = null;
+            if (ninoNuevo==null){
+                //titulo="User not found";
+                address = "noregistrado.jsp";
+
+            }
+            else{
+                //titulo="You're a kid";
+                address = "infonino.jsp";
+            }
+            //request.setAttribute("titulo", titulo);
+            request.setAttribute("ninoTemp", ninoNuevo);
+            //address="displayMember.jsp";
          }
-         else if (usuarioTemp.getAge()<12){
-         address="kid.jsp";
-         }
-         else if (usuarioTemp.getAge()>=12 && usuarioTemp.getAge()<=18){
-         address="teen.jsp";
-         }
-         else if (usuarioTemp.getAge()>18){
-         address="adult.jsp";
-         }
-         request.setAttribute("usuarioTemp", usuarioTemp);
-         }*/
            
          else if (opcion==3)
          {
